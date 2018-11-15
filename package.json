@@ -1,0 +1,22 @@
+{
+  "name": "react-native-update-js",
+  "version": "1.0.0",
+  "description": "热更新组件",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gegeyang0124/react-native-update-js.git"
+  },
+  "keywords": [
+    "react-native-update-js"
+  ],
+  "author": "周阳",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gegeyang0124/react-native-update-js/issues"
+  },
+  "homepage": "https://github.com/gegeyang0124/react-native-update-js#readme"
+}
