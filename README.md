@@ -19,7 +19,7 @@ HotUpdate.doUpdate();//更新重载应用
 ##### HotUpdate 的后台配置，（配置后台文件或接口，自由选择）
 ```
 {
-  "ios-lx_yyt-2.0.7":{//这key是这样设置,ios："ios-" + tag + "-" + packageVersion = "lx_yyt-2.0.7";android："android-" + tag + "-" + packageVersion = "lx_yyt-2.0.7";
+  "ios-lx_yyt-2.0.7":{//这key是这样设置,ios："ios-" + HotUpdate.tag + "-" + packageVersion = "lx_yyt-2.0.7";android："android-" + HotUpdate.tag + "-" + packageVersion = "lx_yyt-2.0.7";
     "tag":"lx_yyt",//app设置的标识 ，HotUpdate.tag="lx_yyt"设置的一致
     "packageVersion":"2.0.7",//app的静态版本(硬版本)号，即编译时设置的版本号，此发生变化就会去下载新的静态版本(硬版本)
     "downloadUrl":"https://itunes.apple.com/cn/app/id1438062830?l=en&mt=8",//静态版本(硬版本)下载地址
