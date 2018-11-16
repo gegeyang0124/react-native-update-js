@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="815e51bc-5c54-46dd-b63a-4592f935fceb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/ios/RNDeviceInfo.xcodeproj/project.pbxproj" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ios/RNDeviceInfo.xcodeproj/project.xcworkspace/contents.xcworkspacedata" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/ios/RNDeviceInfo.xcodeproj/xcuserdata/zy.xcuserdatad/xcschemes/xcschememanagement.plist" />
-    </list>
+    <list default="true" id="815e51bc-5c54-46dd-b63a-4592f935fceb" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -216,18 +212,17 @@
       <option name="presentableId" value="Default" />
       <updated>1542268026906</updated>
       <workItem from="1542268028948" duration="6023000" />
-      <workItem from="1542332250221" duration="14202000" />
+      <workItem from="1542332250221" duration="14292000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20225000" />
+    <option name="totallyTimeSpent" value="20315000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="50" width="1268" height="796" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
