@@ -10,7 +10,8 @@ npm i --save react-native-update-js
 ##### HotUpdate 热更新，以下以下方法详细参数请看源文件
 ```
 import {HotUpdate} from "react-native-update-js";
-Http.checkUpdate();//检查更新
-Http.downloadUpdate();//下载更新
-Http.doUpdate();//更新重载应用
+HotUpdate.host="http://....";//热更新配置文件地址或接口，//get请求
+HotUpdate.checkUpdate();//检查更新
+HotUpdate.downloadUpdate();//下载更新
+HotUpdate.doUpdate();//更新重载应用
 ```

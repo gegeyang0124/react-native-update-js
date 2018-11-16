@@ -47,6 +47,7 @@ export class HotUpdate{
             if(HotUpdate.host){
                 HotUpdate.requestAjax("GET",HotUpdate.host)
                     .then(info=> {
+                        console.info("HotUpdate info:",info);
                         info = info ? info : {};
                         if(typeof info == "string"){
                             info = JSON.parse(info);

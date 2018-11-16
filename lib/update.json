@@ -1,0 +1,17 @@
+{
+  "ios-lx_yyt-2.0.7":{
+    "tag":"lx_yyt",
+    "packageVersion":"2.0.7",
+    "downloadUrl":"https://itunes.apple.com/cn/app/id1438062830?l=en&mt=8",
+    "description":"yyy",
+    "metaInfo":{},
+    "publishJS":[
+      {
+        "description": "asdfsa",
+        "version": "2.0.140",
+        "metaInfo":{},
+        "updateUrl": "http://yyt.lexin580.com:8081/app_config/lx_yyt_app.zip"
+      }
+    ]
+  }
+}
