@@ -42,8 +42,8 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+            <state relative-caret-position="418">
+              <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -217,7 +217,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20808000" />
+    <option name="totallyTimeSpent" value="20823000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1" y="50" width="1268" height="796" extended-state="0" />
@@ -398,8 +398,134 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="17" lean-forward="true" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        <state relative-caret-position="418">
+          <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4123">
+          <caret line="217" column="33" lean-forward="true" selection-start-line="217" selection-start-column="33" selection-end-line="217" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+            <element signature="e#971#1329#0" expanded="false" />
+            <element signature="e#1335#1383#0" expanded="false" />
+            <element signature="e#1415#3831#0" expanded="false" />
+            <element signature="e#1694#1774#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="e#8150#8155#0" expanded="false" />
+            <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#reload#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#test#0;n#HotUpdate#0" expanded="false" />
+            <element signature="e#16276#17288#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../react-native-lib-cus-com/api/HotUpdate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="310" column="45" lean-forward="false" selection-start-line="310" selection-start-column="45" selection-end-line="310" selection-end-column="45" />
+          <folding>
+            <element signature="e#0#58#0" expanded="false" />
+            <element signature="n#!!block;n#RolledBack#0;n#HotUpdate#0" expanded="false" />
+            <element signature="e#3578#8568#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../lx_yyt-ios-201811151434/lx_yyt/phone/pages/Pages.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib.js" />
+    <entry file="file://$PROJECT_DIR$/lib/Loadding.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="29" />
+          <folding>
+            <element signature="e#0#38#0" expanded="false" />
+            <element signature="e#396#2627#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/testService.json" />
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="114" column="13" lean-forward="false" selection-start-line="114" selection-start-column="7" selection-end-line="114" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+            <element signature="e#971#1329#0" expanded="false" />
+            <element signature="e#1335#1383#0" expanded="false" />
+            <element signature="e#1415#3831#0" expanded="false" />
+            <element signature="e#1694#1774#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="e#8150#8155#0" expanded="false" />
+            <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#reload#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#test#0;n#HotUpdate#0" expanded="false" />
+            <element signature="e#16276#17288#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ios/RNDeviceInfo.xcodeproj/xcuserdata/zy.xcuserdatad/xcschemes/xcschememanagement.plist" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="285">
+            <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding />
         </state>
       </provider>
