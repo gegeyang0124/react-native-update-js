@@ -73,13 +73,14 @@ export class HotUpdate{
                                     HotUpdate.updateInfo = {
                                         expired:false,//{expired: false}：该应用包(原生部分)已过期，需要前往应用市场下载新的版本；反之false
                                         packageVersion:info.packageVersion,
+                                        metaInfoPkg:info.metaInfoPkg, //元信息可在里面自定义一些数据,app的静态版本(硬版本)，更新时回传
                                         update:info.publishJS[0].version !== currentVersion
                                             ? true
                                             : false,//{update: true}：当前有新版本可以更新
                                         publishJS:info.publishJS//发布的js所有版本,默认第一个是最新发布的的js版本
                                     };
                                     HotUpdate.updateInfo = Object.assign({},HotUpdate.updateInfo, info.publishJS[0]);
-                                    HotUpdate.updateInfo.metaInfo = Object.assign({},info.metaInfo, HotUpdate.updateInfo.metaInfo);
+                                    console.info("updateInfo:",HotUpdate.updateInfo);
                                     resolve(HotUpdate.updateInfo);
                                 }
                                 else
@@ -94,8 +95,9 @@ export class HotUpdate{
                                     downloadUrl:info.downloadUrl,//更新版本下载地址
                                     packageVersion:info.packageVersion,
                                     description:info.description,
-                                    metaInfo:info.metaInfo
+                                    metaInfoPkg:info.metaInfoPkg //元信息可在里面自定义一些数据,app的静态版本(硬版本)，更新时回传
                                 };
+                                console.info("updateInfo:",HotUpdate.updateInfo);
                                 resolve(HotUpdate.updateInfo);
                             }
                         }
@@ -169,7 +171,6 @@ export class HotUpdate{
                         });
                 });
             });
-        info.version&&this.setVersion(info.version)
     }
 
     /**------------------------------------------------------------------------------------------------------------------**/
@@ -380,7 +381,7 @@ export class HotUpdate{
                 "packageVersion":"2.0.7",
                 "downloadUrl":"https://itunes.apple.com/cn/app/id1438062830?l=en&mt=8",
                 "description":"yyy",
-                "metaInfo":{},
+                "metaInfoPkg":{},
                 "publishJS":[
                     {
                         "description": "asdfsa",
@@ -398,15 +399,13 @@ export class HotUpdate{
                 "packageVersion":"2.0.7",//app的静态版本(硬版本)号，即编译时设置的版本号，此发生变化就会去下载新的静态版本(硬版本)
                 "downloadUrl":"https://itunes.apple.com/cn/app/id1438062830?l=en&mt=8",//静态版本(硬版本)下载地址
                 "description":"yyy",//静态版本(硬版本)描述
-                "metaInfo":{//元信息可在里面自定义一些数据,app的静态版本(硬版本)，更新时回传
-
+                "metaInfoPkg":{//元信息可在里面自定义一些数据,app的静态版本(硬版本)，更新时回传
                 },
                 "publishJS":[//发布的js所有版本,默认第一个是最新发布的的js版本,可任选一个更新
                     {
                         "description": "asdfsa",//js描述
                         "version": "2.0.140",//js的版本号，只能增大
                         "metaInfo":{//元信息可在里面自定义一些数据，js的版本，更新时回传
-
                         },
                         "updateUrl": "http://yyt.lexin580.com:8081/app_config/lx_yyt_app.zip" //js包
                     }
