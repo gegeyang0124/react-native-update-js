@@ -118,10 +118,10 @@ export class HotUpdate{
 
     /**
      * 下载更新
-     * @param info json;//更新信息，即后台返回数据字段publishJS中的一个元素信息，如：info=publishJS[0];
+     * @param info json;//更新信息，checkUpdate成功后返回的数据 ，
      * @param progressCallback func;//进程回调函数
      * return Promise;
-     * resolve(info)有数据返回
+     * resolve(info)有数据返回 checkUpdate成功后返回的数据
      * **/
     static downloadUpdate(info=HotUpdate.updateInfo,progressCallback){
         return new Promise((resolve, reject) => {
