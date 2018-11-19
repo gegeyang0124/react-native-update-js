@@ -78,7 +78,8 @@ export class HotUpdate{
                                             : false,//{update: true}：当前有新版本可以更新
                                         publishJS:info.publishJS//发布的js所有版本,默认第一个是最新发布的的js版本
                                     };
-                                    HotUpdate.updateInfo = Object.assign(HotUpdate.updateInfo, info.publishJS[0]);
+                                    HotUpdate.updateInfo = Object.assign({},HotUpdate.updateInfo, info.publishJS[0]);
+                                    HotUpdate.updateInfo.metaInfo = Object.assign({},info.metaInfo, HotUpdate.updateInfo.metaInfo);
                                     resolve(HotUpdate.updateInfo);
                                 }
                                 else
@@ -183,7 +184,7 @@ export class HotUpdate{
     static downloadJs(info,progressCallback,resolve,reject){
 
         this.downloadFile(info.updateUrl,this.downloadDir,false,progressCallback,(result)=>{
-            info = Object.assign(info, result);
+            info = Object.assign({},info, result);
             resolve(info);
         },reject);
     }
@@ -208,68 +209,60 @@ export class HotUpdate{
                     RNFS.exists(downloadDest)
                         .then((exist) =>{
                             if(!exist || isReDownload){
-                                this.getConnectionInfo()
-                                    .then((connectionInfo) => {
+                                if(fileAddress == undefined)
+                                {
+                                    reject();
+                                }
 
-                                        if(fileAddress == undefined)
-                                        {
-                                            reject();
-                                        }
+                                // 音频
+                                //const downloadDest = `${RNFS.MainBundlePath}/${((Math.random() * 1000) | 0)}.mp3`;
+                                // let downloadDest = `${RNFS.MainBundlePath}/${fileAddress.substring(fileAddress.lastIndexOf('/') + 1)}`;
+                                // let downloadDest = `${RNFS.DocumentDirectoryPath}/${fileAddress.substring(fileAddress.lastIndexOf('/') + 1)}`;
+                                // http://wvoice.spriteapp.cn/voice/2015/0902/55e6fc6e4f7b9.mp3
+                                //const formUrl = 'http://wvoice.spriteapp.cn/voice/2015/0818/55d2248309b09.mp3';VideoView_android.js
 
-                                        // 音频
-                                        //const downloadDest = `${RNFS.MainBundlePath}/${((Math.random() * 1000) | 0)}.mp3`;
-                                        // let downloadDest = `${RNFS.MainBundlePath}/${fileAddress.substring(fileAddress.lastIndexOf('/') + 1)}`;
-                                        // let downloadDest = `${RNFS.DocumentDirectoryPath}/${fileAddress.substring(fileAddress.lastIndexOf('/') + 1)}`;
-                                        // http://wvoice.spriteapp.cn/voice/2015/0902/55e6fc6e4f7b9.mp3
-                                        //const formUrl = 'http://wvoice.spriteapp.cn/voice/2015/0818/55d2248309b09.mp3';VideoView_android.js
+                                let options = {
+                                    fromUrl: fileAddress,
+                                    toFile: downloadDest,
+                                    background: true,
+                                    headers: {
+                                        // 'Cookie': cookie //需要添加验证到接口要设置cookie
+                                    },
+                                    begin: (res) => {
+                                        /*console.log('begin', res);
+                                         console.log('contentLength:', res.contentLength / 1024 / 1024, 'M');*/
+                                        // alert(JSON.stringify(res));
+                                    },
+                                    progress: (res) => {
 
-                                        let options = {
-                                            fromUrl: fileAddress,
-                                            toFile: downloadDest,
-                                            background: true,
-                                            headers: {
-                                                // 'Cookie': cookie //需要添加验证到接口要设置cookie
-                                            },
-                                            begin: (res) => {
-                                                /*console.log('begin', res);
-                                                 console.log('contentLength:', res.contentLength / 1024 / 1024, 'M');*/
-                                                // alert(JSON.stringify(res));
-                                            },
-                                            progress: (res) => {
+                                        //let per = (res.bytesWritten / res.contentLength).toFixed(3);
+                                        let per = (res.bytesWritten / res.contentLength);
+                                        // per = per * 1000;
+                                        // per = parseInt(per);
+                                        // per = per / 1000;
+                                        progressCallback&&progressCallback(per);
+                                    }
+                                };
 
-                                                //let per = (res.bytesWritten / res.contentLength).toFixed(3);
-                                                let per = (res.bytesWritten / res.contentLength);
-                                                // per = per * 1000;
-                                                // per = parseInt(per);
-                                                // per = per / 1000;
-                                                progressCallback&&progressCallback(per);
-                                            }
-                                        };
+                                try {
+                                    let ret = RNFS.downloadFile(options);
+                                    ret.promise.then(retJson => {
+                                        console.log("-----------------------------------------downloadFile " + fileAddress + " success start-------------------------------------");
+                                        console.info("response:",retJson);
+                                        console.log("-----------------------------------------downloadFile " + fileAddress + " success end-------------------------------------");
 
-                                        try {
-                                            let ret = RNFS.downloadFile(options);
-                                            ret.promise.then(retJson => {
-                                                console.log("-----------------------------------------downloadFile " + fileAddress + " success start-------------------------------------");
-                                                console.info("response:",retJson);
-                                                console.log("-----------------------------------------downloadFile " + fileAddress + " success end-------------------------------------");
+                                        retJson["filePath"] = downloadDest;
+                                        resolve(retJson);
 
-                                                retJson["filePath"] = downloadDest;
-                                                resolve(retJson);
-
-                                            }).catch(err => {
-                                                //console.log('err', err);
-                                                reject(err);
-                                            });
-                                        }
-                                        catch (e) {
-                                            //console.log(error);
-                                            reject(e);
-                                        }
-
-                                    })
-                                    .catch(retJson=>{
-                                        reject(retJson);
+                                    }).catch(err => {
+                                        //console.log('err', err);
+                                        reject(err);
                                     });
+                                }
+                                catch (e) {
+                                    //console.log(error);
+                                    reject(e);
+                                }
                             }
                             else
                             {
@@ -369,9 +362,6 @@ export class HotUpdate{
 
             request.open(type, url);
             request.send();
-
-            // alert(JSON.stringify(connectionInfo));
-            // console.log('Initial, type: ' + connectionInfo.type + ', effectiveType: ' + connectionInfo.effectiveType);
         });
 
         /**
@@ -380,7 +370,10 @@ export class HotUpdate{
         return Promise.race([fetchPromise,fetchTimeout]);
     }
 
-    test(){
+    /**
+     * 后台配置json
+     * **/
+    service(){
         let json = {
             "ios-lx_yyt-2.0.7":{
                 "tag":"lx_yyt",

@@ -32,18 +32,23 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="33" column="11" lean-forward="true" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+            <state relative-caret-position="201">
+              <caret line="186" column="50" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="419" selection-end-column="43" />
               <folding>
                 <element signature="e#0#77#0" expanded="true" />
-                <element signature="e#2002#4632#0" expanded="false" />
+                <element signature="e#1042#1970#0" expanded="false" />
                 <element signature="e#2281#2361#0" expanded="false" />
+                <element signature="e#4646#4711#0" expanded="false" />
+                <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+                <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
                 <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
                 <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-                <element signature="e#7712#7798#0" expanded="false" />
+                <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
+                <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
                 <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-                <element signature="e#9041#9046#0" expanded="false" />
+                <element signature="e#8902#8983#0" expanded="false" />
+                <element signature="e#9017#9022#0" expanded="false" />
+                <element signature="e#9702#10975#0" expanded="false" />
                 <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
                 <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
                 <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
@@ -52,6 +57,8 @@
                 <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
                 <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
                 <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
+                <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
+                <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -80,6 +87,8 @@
     <findStrings>
       <find>wwwDownloadDir</find>
       <find>tag</find>
+      <find>connectionInfo</find>
+      <find>Object.assign</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -194,12 +203,12 @@
       <workItem from="1542268028948" duration="6023000" />
       <workItem from="1542332250221" duration="14785000" />
       <workItem from="1542591346918" duration="7000" />
-      <workItem from="1542594983801" duration="3924000" />
+      <workItem from="1542594983801" duration="6435000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28948000" />
+    <option name="totallyTimeSpent" value="31459000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="101" y="132" width="1268" height="796" extended-state="0" />
@@ -263,14 +272,19 @@
           <caret line="116" column="48" lean-forward="false" selection-start-line="116" selection-start-column="48" selection-end-line="116" selection-end-column="48" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#2002#4632#0" expanded="false" />
+            <element signature="e#1042#1970#0" expanded="false" />
             <element signature="e#2281#2361#0" expanded="false" />
+            <element signature="e#4646#4711#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#7712#7798#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#9041#9046#0" expanded="false" />
+            <element signature="e#8902#8983#0" expanded="false" />
+            <element signature="e#9017#9022#0" expanded="false" />
+            <element signature="e#9702#10975#0" expanded="false" />
             <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
@@ -279,6 +293,8 @@
             <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -308,14 +324,19 @@
           <caret line="93" column="6" lean-forward="true" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#2002#4632#0" expanded="false" />
+            <element signature="e#1042#1970#0" expanded="false" />
             <element signature="e#2281#2361#0" expanded="false" />
+            <element signature="e#4646#4711#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#7712#7798#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#9041#9046#0" expanded="false" />
+            <element signature="e#8902#8983#0" expanded="false" />
+            <element signature="e#9017#9022#0" expanded="false" />
+            <element signature="e#9702#10975#0" expanded="false" />
             <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
@@ -324,6 +345,8 @@
             <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -345,14 +368,19 @@
           <caret line="217" column="33" lean-forward="true" selection-start-line="217" selection-start-column="33" selection-end-line="217" selection-end-column="33" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#2002#4632#0" expanded="false" />
+            <element signature="e#1042#1970#0" expanded="false" />
             <element signature="e#2281#2361#0" expanded="false" />
+            <element signature="e#4646#4711#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#7712#7798#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#9041#9046#0" expanded="false" />
+            <element signature="e#8902#8983#0" expanded="false" />
+            <element signature="e#9017#9022#0" expanded="false" />
+            <element signature="e#9702#10975#0" expanded="false" />
             <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
@@ -361,6 +389,8 @@
             <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -394,14 +424,19 @@
           <caret line="114" column="13" lean-forward="false" selection-start-line="114" selection-start-column="7" selection-end-line="114" selection-end-column="13" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#2002#4632#0" expanded="false" />
+            <element signature="e#1042#1970#0" expanded="false" />
             <element signature="e#2281#2361#0" expanded="false" />
+            <element signature="e#4646#4711#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#7712#7798#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#9041#9046#0" expanded="false" />
+            <element signature="e#8902#8983#0" expanded="false" />
+            <element signature="e#9017#9022#0" expanded="false" />
+            <element signature="e#9702#10975#0" expanded="false" />
             <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
@@ -410,6 +445,8 @@
             <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -456,14 +493,19 @@
           <caret line="217" column="33" lean-forward="true" selection-start-line="217" selection-start-column="33" selection-end-line="217" selection-end-column="33" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#2002#4632#0" expanded="false" />
+            <element signature="e#1042#1970#0" expanded="false" />
             <element signature="e#2281#2361#0" expanded="false" />
+            <element signature="e#4646#4711#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#7712#7798#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#9041#9046#0" expanded="false" />
+            <element signature="e#8902#8983#0" expanded="false" />
+            <element signature="e#9017#9022#0" expanded="false" />
+            <element signature="e#9702#10975#0" expanded="false" />
             <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
@@ -472,6 +514,8 @@
             <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -534,18 +578,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="33" column="11" lean-forward="true" selection-start-line="33" selection-start-column="11" selection-end-line="33" selection-end-column="11" />
+        <state relative-caret-position="201">
+          <caret line="186" column="50" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="419" selection-end-column="43" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#2002#4632#0" expanded="false" />
+            <element signature="e#1042#1970#0" expanded="false" />
             <element signature="e#2281#2361#0" expanded="false" />
+            <element signature="e#4646#4711#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#7712#7798#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#9041#9046#0" expanded="false" />
+            <element signature="e#8902#8983#0" expanded="false" />
+            <element signature="e#9017#9022#0" expanded="false" />
+            <element signature="e#9702#10975#0" expanded="false" />
             <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
@@ -554,6 +603,8 @@
             <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
