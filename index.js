@@ -184,7 +184,7 @@ export class HotUpdate{
      * **/
     static downloadJs(info,progressCallback,resolve,reject){
 
-        this.downloadFile(info.updateUrl,this.downloadDir,false,progressCallback,(result)=>{
+        this.downloadFile(info.updateUrl,this.downloadDir,true,progressCallback,(result)=>{
             info = Object.assign({},info, result);
             resolve(info);
         },reject);
