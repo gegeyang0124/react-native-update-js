@@ -9,9 +9,9 @@ import RNFS from "react-native-fs";
 
 const HotUpdateJs = NativeModules.UpateAppJs;
 
-export const packageVersion = HotUpdateJs.packageVersion;//动态版本号，即当前运行的js程序的js版本号
-export const currentVersion = HotUpdateJs.currentVersion;//js代码路径
-export const mainBundleFilePath = HotUpdateJs.mainBundleFilePath;//js代码路径
+export const packageVersion = HotUpdateJs.packageVersion;//app的静态版本(硬版本)号，即编译时设置的版本号，此发生变化就会去下载新的静态版本(硬版本)
+export const currentVersion = HotUpdateJs.currentVersion;//动态版本号，即当前运行的js程序的js版本号
+export const mainBundleFilePath = HotUpdateJs.mainBundleFilePath;//js代码路径 指向main.jsbundle
 export const Loadding = require("./lib/LoaddingIndicator").default;
 
 /**
@@ -19,15 +19,18 @@ export const Loadding = require("./lib/LoaddingIndicator").default;
  * **/
 export class HotUpdate{
 
+    static packageVersion = packageVersion;//app的静态版本(硬版本)号，即编译时设置的版本号，此发生变化就会去下载新的静态版本(硬版本)
     static currentVersion = currentVersion;//动态版本号，即当前运行的js程序的js版本号
-    static mainBundleFilePath = mainBundleFilePath;//js代码路径
-    static packageVersion = packageVersion;//js代码路径
+    static mainBundleFilePath = mainBundleFilePath;//js代码路径 指向main.jsbundle
 
     static host = null;//热更新配置文件地址或接口，//get请求
     static tag = "";//热更新的标志 与后台配置一致
     static downloadDir = Platform.OS == "ios"
+        ? `${RNFS.DocumentDirectoryPath}/wwwDown`
+        : `${RNFS.ExternalStorageDirectoryPath}/wwwDown`;//下载目录
+    static sourceDir = Platform.OS == "ios"
         ? `${RNFS.DocumentDirectoryPath}/wwwRoot`
-        : `${RNFS.ExternalStorageDirectoryPath}/wwwRoot`;//下载目录
+        : `${RNFS.ExternalStorageDirectoryPath}/wwwRoot`;//js程序资源目录
     static updateInfo = {};//更新数据信息
 
     /**
@@ -136,41 +139,34 @@ export class HotUpdate{
      * **/
     static doUpdate(info,isReload=true){
         Loadding.show(true,"正在配置...");
-        let unzipPath = this.downloadDir;
-        this.deleteDirOrFile(unzipPath)
-            .then(()=>{
-                RNFS.mkdir(unzipPath).then(()=>{
-                    unzip(info.filePath, unzipPath)
-                        .then((path) => {
-                            console.info('info:',info);
-                            console.info('unzip completed:',path);
-                            // FileSystem.readDir(unzipPath);
-                            this.deleteDirOrFile(info.filePath)
-                                .then(()=>{
+        let unzipPath = this.sourceDir + "/" + new Date().getTime();
 
-                                    let sourceDir = "/" + info.filePath.substring(
-                                        info.filePath.lastIndexOf("/") + 1,
-                                        info.filePath.lastIndexOf(".")
-                                    );
-                                    sourceDir = unzipPath + sourceDir;
-                                    this.setVersion(info.version,sourceDir)
-                                        .then(()=>{
-                                            if(isReload){
-                                                this.reload();
-                                            }
+        RNFS.mkdir(unzipPath).then(()=>{
+            unzip(info.filePath, unzipPath)
+                .then((path) => {
+                    console.info('info:',info);
+                    console.info('unzip completed:',path);
 
-                                        })
-                                        .catch(()=>{
-                                            Loadding.hide();
-                                        });
-                                });
-
+                    let sourceDir = "/" + info.filePath.substring(
+                        info.filePath.lastIndexOf("/") + 1,
+                        info.filePath.lastIndexOf(".")
+                    );
+                    sourceDir = unzipPath + sourceDir;
+                    this.setVersion(info.version,sourceDir)
+                        .then(()=>{
+                            Loadding.hide();
+                            if(isReload){
+                                this.reload();
+                            }
                         })
-                        .catch((error) => {
-                            console.log("error:" + error);
+                        .catch(()=>{
+                            Loadding.hide();
                         });
+                })
+                .catch((error) => {
+                    console.log("error:" + error);
                 });
-            });
+        });
     }
 
     /**------------------------------------------------------------------------------------------------------------------**/
@@ -184,15 +180,19 @@ export class HotUpdate{
      * **/
     static downloadJs(info,progressCallback,resolve,reject){
 
-        this.downloadFile(info.updateUrl,this.downloadDir,
-            true,progressCallback)
-            .then(result=>{
-                info = Object.assign({},info, result);
-                resolve&&resolve(info);
-            })
-            .catch(()=>{
-                reject&&reject()
+        this.deleteDirOrFile(this.downloadDir)
+            .then(()=>{
+                this.downloadFile(info.updateUrl,this.downloadDir,
+                    true,progressCallback)
+                    .then(result=>{
+                        info = Object.assign({},info, result);
+                        resolve&&resolve(info);
+                    })
+                    .catch(()=>{
+                        reject&&reject()
+                    });
             });
+
     }
 
     /**
@@ -207,7 +207,6 @@ export class HotUpdate{
      * **/
     static downloadFile(fileAddress,downloadPath=this.downloadDir,
                         isReDownload=false,progressCallback) {
-
         return  new Promise((resolve,reject)=>{
 
             let downloadDest = downloadPath + `/${fileAddress.substring(fileAddress.lastIndexOf('/') + 1)}`;
@@ -312,13 +311,19 @@ export class HotUpdate{
      * **/
     static deleteDirOrFile (path) {
         return new Promise((resolve, reject) => {
-            RNFS.unlink(path).then(() => {
-                console.info('FILE DELETED success',"success");
+            if(path){
+                RNFS.unlink(path).then(() => {
+                    console.info('FILE DELETED success',"success");
+                    resolve(path);
+                }).catch((err) => {
+                    console.info('FILE DELETED err',err);
+                    resolve(path);
+                });
+            }
+            else
+            {
                 resolve(path);
-            }).catch((err) => {
-                console.info('FILE DELETED err',err);
-                resolve(path);
-            });
+            }
         });
     }
 
@@ -379,6 +384,41 @@ export class HotUpdate{
     }
 
     /**
+     * 删除目录下得一级目录和文件
+     * **/
+    static delDir(){
+        if(RNFS.readDir){
+            RNFS.readDir(this.sourceDir)
+                .then((files)=>{
+                    let path = mainBundleFilePath.substring(0,mainBundleFilePath.lastIndexOf("/"));
+                    path = path.substring(0,path.lastIndexOf("/"));
+                    files.forEach((v,i,a)=>{
+                        if(v.path != path){
+                            this.deleteDirOrFile(v.path);
+                        }
+                    });
+                });
+        }
+    }
+
+    /**
+     * 设置用户偏好值
+     * @prama key stirng;//偏好值的键key
+     * @prama value stirng;//偏好值的值value
+     * **/
+    static setPreferData(key:string,value:string){
+        return HotUpdateJs.setPreferData(key,value);
+    }
+
+    /**
+     * 设置用户偏好值
+     * @prama key stirng;//偏好值的键key
+     * **/
+    static getPreferData(key:string){
+        return HotUpdateJs.getPreferData(key);
+    }
+
+    /**
      * 后台配置json
      * **/
     service(){
@@ -422,5 +462,7 @@ export class HotUpdate{
         }
     }
 }
+
+RNFS.delDir();
 
 // RNFS.mkdir(HotUpdateCus.wwwDownloadDir);
