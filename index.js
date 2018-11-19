@@ -9,9 +9,9 @@ import RNFS from "react-native-fs";
 
 const HotUpdateJs = NativeModules.UpateAppJs;
 
-export const packageVersion = HotUpdateJs.packageVersion;
-export const currentVersion = HotUpdateJs.currentVersion;
-export const mainBundleFilePath = HotUpdateJs.mainBundleFilePath;
+export const packageVersion = HotUpdateJs.packageVersion;//动态版本号，即当前运行的js程序的js版本号
+export const currentVersion = HotUpdateJs.currentVersion;//js代码路径
+export const mainBundleFilePath = HotUpdateJs.mainBundleFilePath;//js代码路径
 export const Loadding = require("./lib/Loadding");
 
 /**
@@ -19,7 +19,7 @@ export const Loadding = require("./lib/Loadding");
  * **/
 export class HotUpdate{
 
-    static currentVersion = currentVersion;//动态版本号，即js版本号
+    static currentVersion = currentVersion;//动态版本号，即当前运行的js程序的js版本号
     static mainBundleFilePath = mainBundleFilePath;//js代码路径
     static packageVersion = packageVersion;//js代码路径
 
@@ -42,6 +42,26 @@ export class HotUpdate{
     /**
      * 检查更新
      * return Promise
+     Promise成功后的回传数据
+     若app的静态版本(硬版本)更新则返回：
+     resolve({
+         expired:true,//{expired: true}：该应用包(原生部分)已过期，需要前往应用市场下载新的版本；反之false
+         downloadUrl:"",//更新版本下载地址
+         packageVersion:"2.0.7",//app的静态版本(硬版本)号，即编译时设置的版本号，此发生变化就会去下载新的静态版本(硬版本)
+         description:"yyy",//静态版本(硬版本)描述
+         metaInfo:{}//元信息可在里面自定义一些数据,app的静态版本(硬版本)，更新时回传
+     });
+     若只是js动态版本更新则返回：
+     resolve({
+         expired:flase,//{expired: true}：该应用包(原生部分)已过期，需要前往应用市场下载新的版本；反之false
+         packageVersion:"2.0.7",//app的静态版本(硬版本)号，即编译时设置的版本号，此发生变化就会去下载新的静态版本(硬版本)
+         update:true,//{update: true}：当前有新版本可以更新
+         metaInfo:{},//元信息可在里面自定义一些数据，js的版本，更新时回传
+         publishJS:[]//发布的js所有版本,默认第一个是最新发布的的js版本
+         description: "asdfsa",//js描述
+         version: "2.0.140",//js的版本号，只能增大
+         updateUrl: "http://yyt.lexin580.com:8081/app_config/lx_yyt_app.zip" //js包
+     });
      * **/
     static checkUpdate = () => {
         return new Promise((resolve, reject) => {
@@ -61,6 +81,7 @@ export class HotUpdate{
                                 if(info.publishJS && info.publishJS.length > 0){
                                     HotUpdate.updateInfo = {
                                         expired:false,//{expired: false}：该应用包(原生部分)已过期，需要前往应用市场下载新的版本；反之false
+                                        packageVersion:info.packageVersion,
                                         update:info.publishJS[0].version !== currentVersion
                                             ? true
                                             : false,//{update: true}：当前有新版本可以更新
@@ -79,6 +100,8 @@ export class HotUpdate{
                                 HotUpdate.updateInfo = {
                                     expired:true,//{expired: true}：该应用包(原生部分)已过期，需要前往应用市场下载新的版本；反之false
                                     downloadUrl:info.downloadUrl,//更新版本下载地址
+                                    packageVersion:info.packageVersion,
+                                    description:info.description,
                                     metaInfo:info.metaInfo
                                 };
                                 resolve(HotUpdate.updateInfo);

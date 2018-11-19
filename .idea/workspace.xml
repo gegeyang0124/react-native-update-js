@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="815e51bc-5c54-46dd-b63a-4592f935fceb" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -13,31 +14,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DockManager">
-    <window id="3">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/README.md">
-                <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-                  <state split_layout="SPLIT">
-                    <first_editor relative-caret-position="399">
-                      <caret line="21" column="135" lean-forward="false" selection-start-line="21" selection-start-column="135" selection-end-line="21" selection-end-column="135" />
-                      <folding />
-                    </first_editor>
-                    <second_editor>
-                      <markdownNavigatorState />
-                    </second_editor>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -57,13 +33,12 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="49" column="34" lean-forward="false" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+            <state relative-caret-position="210">
+              <caret line="89" column="75" lean-forward="false" selection-start-line="89" selection-start-column="75" selection-end-line="89" selection-end-column="75" />
               <folding>
                 <element signature="e#0#77#0" expanded="true" />
-                <element signature="e#1008#1366#0" expanded="false" />
-                <element signature="e#1372#1420#0" expanded="false" />
-                <element signature="e#1731#1811#0" expanded="false" />
+                <element signature="e#1058#1416#0" expanded="false" />
+                <element signature="e#2661#2741#0" expanded="false" />
                 <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
                 <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
                 <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
@@ -71,7 +46,7 @@
                 <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
                 <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
                 <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-                <element signature="e#8187#8192#0" expanded="false" />
+                <element signature="e#9331#9336#0" expanded="false" />
                 <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
                 <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
                 <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
@@ -80,7 +55,6 @@
                 <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
                 <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
                 <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#test#0;n#HotUpdate#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -90,7 +64,7 @@
         <entry file="file://$PROJECT_DIR$/lib/update.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="304">
-              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -146,9 +120,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="332" />
-    <option name="y" value="73" />
+  <component name="ProjectFrameBounds" extendedState="1">
+    <option name="x" value="101" />
+    <option name="y" value="132" />
     <option name="width" value="1268" />
     <option name="height" value="796" />
   </component>
@@ -168,7 +142,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -186,11 +159,12 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../lx_yyt-ios-201811151434" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Bower" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -227,14 +201,16 @@
       <updated>1542268026906</updated>
       <workItem from="1542268028948" duration="6023000" />
       <workItem from="1542332250221" duration="14785000" />
+      <workItem from="1542591346918" duration="7000" />
+      <workItem from="1542594983801" duration="1270000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24366000" />
+    <option name="totallyTimeSpent" value="26294000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="332" y="73" width="1268" height="796" extended-state="0" />
+    <frame x="101" y="132" width="1268" height="796" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -242,8 +218,8 @@
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -272,6 +248,100 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          <folding>
+            <element signature="e#318#451#0" expanded="false" />
+            <element signature="n#!!block;n#author#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/update.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="798">
+          <caret line="116" column="48" lean-forward="false" selection-start-line="116" selection-start-column="48" selection-end-line="116" selection-end-column="48" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+            <element signature="e#1058#1416#0" expanded="false" />
+            <element signature="e#2661#2741#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="e#9331#9336#0" expanded="false" />
+            <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#reload#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
+          <folding>
+            <element signature="e#318#451#0" expanded="false" />
+            <element signature="n#!!block;n#author#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/update.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1767">
+          <caret line="93" column="6" lean-forward="true" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+            <element signature="e#1058#1416#0" expanded="false" />
+            <element signature="e#2661#2741#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="e#9331#9336#0" expanded="false" />
+            <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#reload#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
           <folding>
@@ -287,9 +357,8 @@
           <caret line="217" column="33" lean-forward="true" selection-start-line="217" selection-start-column="33" selection-end-line="217" selection-end-column="33" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#1008#1366#0" expanded="false" />
-            <element signature="e#1372#1420#0" expanded="false" />
-            <element signature="e#1731#1811#0" expanded="false" />
+            <element signature="e#1058#1416#0" expanded="false" />
+            <element signature="e#2661#2741#0" expanded="false" />
             <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
@@ -297,7 +366,7 @@
             <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#8187#8192#0" expanded="false" />
+            <element signature="e#9331#9336#0" expanded="false" />
             <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
@@ -306,7 +375,6 @@
             <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#test#0;n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -315,11 +383,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="310" column="45" lean-forward="false" selection-start-line="310" selection-start-column="45" selection-end-line="310" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#58#0" expanded="false" />
-            <element signature="n#!!block;n#RolledBack#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#3578#8568#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -327,46 +390,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/lib.js" />
     <entry file="file://$PROJECT_DIR$/lib/Loadding.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-            <element signature="e#396#2627#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testService.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="36" lean-forward="false" selection-start-line="21" selection-start-column="36" selection-end-line="21" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/testService.json" />
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
           <caret line="114" column="13" lean-forward="false" selection-start-line="114" selection-start-column="7" selection-end-line="114" selection-end-column="13" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#1008#1366#0" expanded="false" />
-            <element signature="e#1372#1420#0" expanded="false" />
-            <element signature="e#1731#1811#0" expanded="false" />
+            <element signature="e#1058#1416#0" expanded="false" />
+            <element signature="e#2661#2741#0" expanded="false" />
             <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
@@ -374,7 +417,7 @@
             <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#8187#8192#0" expanded="false" />
+            <element signature="e#9331#9336#0" expanded="false" />
             <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
@@ -383,19 +426,11 @@
             <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#test#0;n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ios/RNDeviceInfo.xcodeproj/xcuserdata/zy.xcuserdatad/xcschemes/xcschememanagement.plist">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="57" lean-forward="true" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ios/RNDeviceInfo.xcodeproj/xcuserdata/zy.xcuserdatad/xcschemes/xcschememanagement.plist" />
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -437,9 +472,8 @@
           <caret line="217" column="33" lean-forward="true" selection-start-line="217" selection-start-column="33" selection-end-line="217" selection-end-column="33" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#1008#1366#0" expanded="false" />
-            <element signature="e#1372#1420#0" expanded="false" />
-            <element signature="e#1731#1811#0" expanded="false" />
+            <element signature="e#1058#1416#0" expanded="false" />
+            <element signature="e#2661#2741#0" expanded="false" />
             <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
@@ -447,7 +481,7 @@
             <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#8187#8192#0" expanded="false" />
+            <element signature="e#9331#9336#0" expanded="false" />
             <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
@@ -456,7 +490,6 @@
             <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#test#0;n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -465,11 +498,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
           <caret line="310" column="45" lean-forward="false" selection-start-line="310" selection-start-column="45" selection-end-line="310" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#58#0" expanded="false" />
-            <element signature="n#!!block;n#RolledBack#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#3578#8568#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -485,10 +513,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="18" column="29" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="29" />
-          <folding>
-            <element signature="e#0#38#0" expanded="false" />
-            <element signature="e#396#2627#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -505,14 +529,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/update.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
@@ -526,15 +542,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/lib/update.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="49" column="34" lean-forward="false" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
+        <state relative-caret-position="210">
+          <caret line="89" column="75" lean-forward="false" selection-start-line="89" selection-start-column="75" selection-end-line="89" selection-end-column="75" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#1008#1366#0" expanded="false" />
-            <element signature="e#1372#1420#0" expanded="false" />
-            <element signature="e#1731#1811#0" expanded="false" />
+            <element signature="e#1058#1416#0" expanded="false" />
+            <element signature="e#2661#2741#0" expanded="false" />
             <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
@@ -542,7 +565,7 @@
             <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#8187#8192#0" expanded="false" />
+            <element signature="e#9331#9336#0" expanded="false" />
             <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
@@ -551,7 +574,6 @@
             <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#test#0;n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
