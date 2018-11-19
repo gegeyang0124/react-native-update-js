@@ -32,20 +32,19 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="137" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="435" selection-end-column="43" />
+            <state relative-caret-position="269">
+              <caret line="200" column="11" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="435" selection-end-column="43" />
               <folding>
                 <element signature="e#0#77#0" expanded="true" />
                 <element signature="e#1058#1416#0" expanded="false" />
                 <element signature="e#2382#5012#0" expanded="false" />
                 <element signature="e#2661#2741#0" expanded="false" />
-                <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+                <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
                 <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
                 <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
+                <element signature="e#8092#8178#0" expanded="false" />
                 <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-                <element signature="e#9325#9330#0" expanded="false" />
+                <element signature="e#9421#9426#0" expanded="false" />
                 <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
                 <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
                 <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
@@ -148,11 +147,6 @@
               <item name="react-native-update-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-native-update-js" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="react-native-update-js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-native-update-js" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -163,7 +157,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-native-lib-cus-com" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Bower" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
@@ -201,12 +195,12 @@
       <workItem from="1542268028948" duration="6023000" />
       <workItem from="1542332250221" duration="14785000" />
       <workItem from="1542591346918" duration="7000" />
-      <workItem from="1542594983801" duration="1938000" />
+      <workItem from="1542594983801" duration="3432000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26962000" />
+    <option name="totallyTimeSpent" value="28456000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="101" y="132" width="1268" height="796" extended-state="0" />
@@ -273,13 +267,12 @@
             <element signature="e#1058#1416#0" expanded="false" />
             <element signature="e#2382#5012#0" expanded="false" />
             <element signature="e#2661#2741#0" expanded="false" />
-            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="e#8092#8178#0" expanded="false" />
             <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#9325#9330#0" expanded="false" />
+            <element signature="e#9421#9426#0" expanded="false" />
             <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
@@ -320,13 +313,12 @@
             <element signature="e#1058#1416#0" expanded="false" />
             <element signature="e#2382#5012#0" expanded="false" />
             <element signature="e#2661#2741#0" expanded="false" />
-            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="e#8092#8178#0" expanded="false" />
             <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#9325#9330#0" expanded="false" />
+            <element signature="e#9421#9426#0" expanded="false" />
             <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
@@ -359,13 +351,12 @@
             <element signature="e#1058#1416#0" expanded="false" />
             <element signature="e#2382#5012#0" expanded="false" />
             <element signature="e#2661#2741#0" expanded="false" />
-            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="e#8092#8178#0" expanded="false" />
             <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#9325#9330#0" expanded="false" />
+            <element signature="e#9421#9426#0" expanded="false" />
             <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
@@ -410,13 +401,12 @@
             <element signature="e#1058#1416#0" expanded="false" />
             <element signature="e#2382#5012#0" expanded="false" />
             <element signature="e#2661#2741#0" expanded="false" />
-            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="e#8092#8178#0" expanded="false" />
             <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#9325#9330#0" expanded="false" />
+            <element signature="e#9421#9426#0" expanded="false" />
             <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
@@ -474,13 +464,12 @@
             <element signature="e#1058#1416#0" expanded="false" />
             <element signature="e#2382#5012#0" expanded="false" />
             <element signature="e#2661#2741#0" expanded="false" />
-            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="e#8092#8178#0" expanded="false" />
             <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#9325#9330#0" expanded="false" />
+            <element signature="e#9421#9426#0" expanded="false" />
             <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
@@ -551,20 +540,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="137" column="7" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="435" selection-end-column="43" />
+        <state relative-caret-position="269">
+          <caret line="200" column="11" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="435" selection-end-column="43" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
             <element signature="e#1058#1416#0" expanded="false" />
             <element signature="e#2382#5012#0" expanded="false" />
             <element signature="e#2661#2741#0" expanded="false" />
-            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
+            <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
+            <element signature="e#8092#8178#0" expanded="false" />
             <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#9325#9330#0" expanded="false" />
+            <element signature="e#9421#9426#0" expanded="false" />
             <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
             <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />

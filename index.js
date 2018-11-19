@@ -118,10 +118,10 @@ export class HotUpdate{
 
     /**
      * 下载更新
-     * @param info json;//更新信息，checkUpdate成功后返回的数据 ，
-     * @param progressCallback func;//进程回调函数
+     * @param info json;//更新信息，checkUpdate成功后返回的数据 ，可不传
+     * @param progressCallback func;//进程回调函数，回传三位小数 可不传
      * return Promise;
-     * resolve(info)有数据返回 checkUpdate成功后返回的数据
+     * resolve(info)有数据返回 成功回传数据，在info中增加字段filePath，{filePath:"下载文件路径"}
      * **/
     static downloadUpdate(info=HotUpdate.updateInfo,progressCallback){
         return new Promise((resolve, reject) => {
@@ -184,9 +184,9 @@ export class HotUpdate{
 
     /**
      * 下载Js
-     * @param info json;//更新信息，即后台返回数据字段publishJS中的一个元素信息，如：info=publishJS[0];
+     * @param info json;//更新信息，checkUpdate成功后返回的数据 ，
      * @param progressCallback func;//进程回调函数
-     * @param resolve func;//成功回调函数
+     * @param resolve func;//成功回调函数,成功回传数据，在info中增加字段filePath，{filePath:"下载文件路径"}
      * @param reject func;//失败回调函数
      * **/
     static downloadJs(info,progressCallback,resolve,reject){
@@ -202,8 +202,8 @@ export class HotUpdate{
      * @param fileAddress string,//文件地址
      * @param downloadPath string,//下载存放文件目录路径 默认null,使用默认下载目录
      * @param isReDownload bool,//是否重新下载，默认false，false:若存在则不再下载，反之下载
-     * @param progressCallback func;//进程回调函数
-     * @param resolve func;//成功回调函数
+     * @param progressCallback func;//进程回调函数 ，回传三位小数 可不传
+     * @param resolve func;//成功回调函数 回传数据{filePath:"下载文件路径"}
      * @param reject func;//失败回调函数
      * **/
     static downloadFile(fileAddress,downloadPath=this.downloadDir,isReDownload=false,progressCallback,resolve,reject) {
