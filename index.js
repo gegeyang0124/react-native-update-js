@@ -12,7 +12,7 @@ const HotUpdateJs = NativeModules.UpateAppJs;
 export const packageVersion = HotUpdateJs.packageVersion;//动态版本号，即当前运行的js程序的js版本号
 export const currentVersion = HotUpdateJs.currentVersion;//js代码路径
 export const mainBundleFilePath = HotUpdateJs.mainBundleFilePath;//js代码路径
-export const Loadding = require("./lib/Loadding");
+export const Loadding = require("./lib/LoaddingIndicator").default;
 
 /**
  * 热更新，提供热更新各种方法,自己配置服务器
@@ -184,10 +184,15 @@ export class HotUpdate{
      * **/
     static downloadJs(info,progressCallback,resolve,reject){
 
-        this.downloadFile(info.updateUrl,this.downloadDir,true,progressCallback,(result)=>{
-            info = Object.assign({},info, result);
-            resolve(info);
-        },reject);
+        this.downloadFile(info.updateUrl,this.downloadDir,
+            true,progressCallback)
+            .then(result=>{
+                info = Object.assign({},info, result);
+                resolve&&resolve(info);
+            })
+            .catch(()=>{
+                reject&&reject()
+            });
     }
 
     /**
@@ -196,10 +201,12 @@ export class HotUpdate{
      * @param downloadPath string,//下载存放文件目录路径 默认null,使用默认下载目录
      * @param isReDownload bool,//是否重新下载，默认false，false:若存在则不再下载，反之下载
      * @param progressCallback func;//进程回调函数 ，回传三位小数 可不传
-     * @param resolve func;//成功回调函数 回传数据{filePath:"下载文件路径"}
-     * @param reject func;//失败回调函数
+     * return Promise
+     *  resolve func;//成功回调函数 回传数据{filePath:"下载文件路径"}
+     *  reject func;//失败回调函数
      * **/
-    static downloadFile(fileAddress,downloadPath=this.downloadDir,isReDownload=false,progressCallback,resolve,reject) {
+    static downloadFile(fileAddress,downloadPath=this.downloadDir,
+                        isReDownload=false,progressCallback) {
 
         return  new Promise((resolve,reject)=>{
 
