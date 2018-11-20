@@ -390,8 +390,15 @@ export class HotUpdate{
         if(RNFS.readDir){
             RNFS.readDir(this.sourceDir)
                 .then((files)=>{
-                    let path = mainBundleFilePath.substring(0,mainBundleFilePath.lastIndexOf("/"));
-                    path = path.substring(0,path.lastIndexOf("/"));
+                    let path = null;
+                    if(mainBundleFilePath)
+                    {
+                        mainBundleFilePath.substring(0,mainBundleFilePath.lastIndexOf("/"))
+                    }
+                    if(path){
+                        path = path.substring(0,path.lastIndexOf("/"));
+                    }
+
                     files.forEach((v,i,a)=>{
                         if(v.path != path){
                             this.deleteDirOrFile(v.path);

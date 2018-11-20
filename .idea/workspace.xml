@@ -63,35 +63,10 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="486">
-              <caret line="466" column="0" lean-forward="true" selection-start-line="466" selection-start-column="0" selection-end-line="466" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="405" column="23" lean-forward="true" selection-start-line="405" selection-start-column="23" selection-end-line="405" selection-end-column="23" />
               <folding>
                 <element signature="e#0#77#0" expanded="true" />
-                <element signature="e#2295#5246#0" expanded="false" />
-                <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#reload#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!doc;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!doc;n#delDir#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#delDir#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!doc;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!doc;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -270,12 +245,12 @@
       <workItem from="1542332250221" duration="14785000" />
       <workItem from="1542591346918" duration="7000" />
       <workItem from="1542594983801" duration="15817000" />
-      <workItem from="1542691755977" duration="29000" />
+      <workItem from="1542691755977" duration="1900000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46454000" />
+    <option name="totallyTimeSpent" value="48325000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="6" y="44" width="949" height="796" extended-state="0" />
@@ -357,31 +332,6 @@
           <caret line="465" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="467" selection-end-column="43" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#2295#5246#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#reload#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -411,31 +361,6 @@
           <caret line="116" column="48" lean-forward="false" selection-start-line="116" selection-start-column="48" selection-end-line="116" selection-end-column="48" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#2295#5246#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#reload#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -465,31 +390,6 @@
           <caret line="93" column="6" lean-forward="true" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#2295#5246#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#reload#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -511,31 +411,6 @@
           <caret line="217" column="33" lean-forward="true" selection-start-line="217" selection-start-column="33" selection-end-line="217" selection-end-column="33" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#2295#5246#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#reload#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -569,31 +444,6 @@
           <caret line="114" column="13" lean-forward="false" selection-start-line="114" selection-start-column="7" selection-end-line="114" selection-end-column="13" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#2295#5246#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#reload#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -640,31 +490,6 @@
           <caret line="217" column="33" lean-forward="true" selection-start-line="217" selection-start-column="33" selection-end-line="217" selection-end-column="33" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#2295#5246#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#reload#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -742,31 +567,6 @@
           <caret line="296" column="5" lean-forward="true" selection-start-line="296" selection-start-column="5" selection-end-line="296" selection-end-column="5" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#2295#5246#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#reload#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -829,35 +629,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="466" column="0" lean-forward="true" selection-start-line="466" selection-start-column="0" selection-end-line="466" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="405" column="23" lean-forward="true" selection-start-line="405" selection-start-column="23" selection-end-line="405" selection-end-column="23" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#2295#5246#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#doUpdate#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadJs#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#downloadFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setVersion#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setVersion#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#reload#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#reload#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#deleteDirOrFile#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
