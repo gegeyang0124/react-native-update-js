@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="815e51bc-5c54-46dd-b63a-4592f935fceb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
+      <change beforePath="$PROJECT_DIR$/ios/update/UpateAppJs.m" afterPath="$PROJECT_DIR$/ios/update/UpateAppJs.m" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -60,7 +59,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -68,6 +67,16 @@
               <folding>
                 <element signature="e#0#77#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpateAppJs.m" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ios/update/UpateAppJs.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1726">
+              <caret line="171" column="0" lean-forward="true" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -135,6 +144,7 @@
         <option value="$PROJECT_DIR$/lib/Loadding.js" />
         <option value="$PROJECT_DIR$/example/HotUpdateTest.js" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/ios/update/UpateAppJs.m" />
       </list>
     </option>
   </component>
@@ -162,7 +172,7 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="6" />
     <option name="y" value="44" />
     <option name="width" value="949" />
@@ -191,6 +201,17 @@
             <path>
               <item name="react-native-update-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-native-update-js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-native-update-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-native-update-js" type="462c0819:PsiDirectoryNode" />
+              <item name="ios" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-native-update-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-native-update-js" type="462c0819:PsiDirectoryNode" />
+              <item name="ios" type="462c0819:PsiDirectoryNode" />
+              <item name="update" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="react-native-update-js" type="b2602c69:ProjectViewProjectNode" />
@@ -245,15 +266,15 @@
       <workItem from="1542332250221" duration="14785000" />
       <workItem from="1542591346918" duration="7000" />
       <workItem from="1542594983801" duration="15817000" />
-      <workItem from="1542691755977" duration="1900000" />
+      <workItem from="1542691755977" duration="2412000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48325000" />
+    <option name="totallyTimeSpent" value="48837000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="44" width="949" height="796" extended-state="0" />
+    <frame x="6" y="44" width="949" height="796" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24973205" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -620,13 +641,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ios/update/UpateAppJs.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="56" column="85" lean-forward="false" selection-start-line="56" selection-start-column="77" selection-end-line="56" selection-end-column="85" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -634,6 +648,14 @@
           <folding>
             <element signature="e#0#77#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ios/update/UpateAppJs.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1726">
+          <caret line="171" column="0" lean-forward="true" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
