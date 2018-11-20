@@ -454,7 +454,7 @@ export class HotUpdate{
                 "downloadUrl":"https://itunes.apple.com/cn/app/id1438062830?l=en&mt=8",//静态版本(硬版本)下载地址
                 "description":"yyy",//静态版本(硬版本)描述
                 "metaInfoPkg":{//元信息可在里面自定义一些数据,app的静态版本(硬版本)，更新时回传
-                    "rnUpdate":true//是否开启react-native-update热更新，默认false关闭，使用自定义热更新；true开启，使用react-native-update热更新，只能选择一种
+                    "rnUpdate":true//此字段是我测试项目自定义的，是否开启react-native-update热更新，默认false关闭，使用自定义热更新；true开启，使用react-native-update热更新，只能选择一种
                 },
                 "publishJS":[//发布的js所有版本,默认第一个是最新发布的的js版本,可任选一个更新
                     {

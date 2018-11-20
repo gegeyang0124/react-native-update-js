@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="815e51bc-5c54-46dd-b63a-4592f935fceb" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
       <change beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -59,36 +60,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="456" column="121" lean-forward="true" selection-start-line="456" selection-start-column="19" selection-end-line="456" selection-end-column="121" />
+            <state relative-caret-position="391">
+              <caret line="449" column="23" lean-forward="true" selection-start-line="449" selection-start-column="23" selection-end-line="469" selection-end-column="9" />
               <folding>
                 <element signature="e#0#77#0" expanded="true" />
+                <element signature="e#17938#19123#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HotUpdateTest.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/example/HotUpdateTest.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6118">
-              <caret line="338" column="36" lean-forward="true" selection-start-line="338" selection-start-column="36" selection-end-line="338" selection-end-column="36" />
-              <folding>
-                <element signature="e#0#45#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoaddingIndicator.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/LoaddingIndicator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-              <folding />
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="445">
+                <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+                <folding />
+              </first_editor>
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
             </state>
           </provider>
         </entry>
@@ -130,11 +125,11 @@
         <option value="$PROJECT_DIR$/lib.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/lib/update.json" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/lib/Loadding.js" />
         <option value="$PROJECT_DIR$/example/HotUpdateTest.js" />
         <option value="$PROJECT_DIR$/ios/update/UpateAppJs.m" />
         <option value="$PROJECT_DIR$/index.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -163,9 +158,9 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="6" />
-    <option name="y" value="44" />
-    <option name="width" value="1155" />
+    <option name="x" value="167" />
+    <option name="y" value="38" />
+    <option name="width" value="1361" />
     <option name="height" value="796" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -256,18 +251,18 @@
       <workItem from="1542332250221" duration="14785000" />
       <workItem from="1542591346918" duration="7000" />
       <workItem from="1542594983801" duration="15817000" />
-      <workItem from="1542691755977" duration="3084000" />
+      <workItem from="1542691755977" duration="3601000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49509000" />
+    <option name="totallyTimeSpent" value="50026000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="6" y="44" width="1155" height="796" extended-state="0" />
+    <frame x="167" y="38" width="1361" height="796" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2045654" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1732342" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -343,6 +338,7 @@
           <caret line="465" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="467" selection-end-column="43" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
+            <element signature="e#17938#19123#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -372,6 +368,7 @@
           <caret line="116" column="48" lean-forward="false" selection-start-line="116" selection-start-column="48" selection-end-line="116" selection-end-column="48" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
+            <element signature="e#17938#19123#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -401,6 +398,7 @@
           <caret line="93" column="6" lean-forward="true" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
+            <element signature="e#17938#19123#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -422,6 +420,7 @@
           <caret line="217" column="33" lean-forward="true" selection-start-line="217" selection-start-column="33" selection-end-line="217" selection-end-column="33" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
+            <element signature="e#17938#19123#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -455,6 +454,7 @@
           <caret line="114" column="13" lean-forward="false" selection-start-line="114" selection-start-column="7" selection-end-line="114" selection-end-column="13" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
+            <element signature="e#17938#19123#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -501,6 +501,7 @@
           <caret line="217" column="33" lean-forward="true" selection-start-line="217" selection-start-column="33" selection-end-line="217" selection-end-column="33" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
+            <element signature="e#17938#19123#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -578,6 +579,7 @@
           <caret line="296" column="5" lean-forward="true" selection-start-line="296" selection-start-column="5" selection-end-line="296" selection-end-column="5" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
+            <element signature="e#17938#19123#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -593,29 +595,10 @@
     <entry file="file://$PROJECT_DIR$/lib.js" />
     <entry file="file://$PROJECT_DIR$/testService.json" />
     <entry file="file://$PROJECT_DIR$/ios/RNDeviceInfo.xcodeproj/xcuserdata/zy.xcuserdatad/xcschemes/xcschememanagement.plist" />
-    <entry file="file://$PROJECT_DIR$/README.md" />
-    <entry file="file://$PROJECT_DIR$/example/HotUpdateTest.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6118">
-          <caret line="338" column="36" lean-forward="true" selection-start-line="338" selection-start-column="36" selection-end-line="338" selection-end-column="36" />
-          <folding>
-            <element signature="e#0#45#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/LoaddingIndicator.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="30" column="25" lean-forward="false" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/update.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding />
         </state>
       </provider>
@@ -639,13 +622,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/example/HotUpdateTest.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="424">
+          <caret line="338" column="36" lean-forward="true" selection-start-line="338" selection-start-column="36" selection-end-line="338" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/update.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="163">
-          <caret line="456" column="121" lean-forward="true" selection-start-line="456" selection-start-column="19" selection-end-line="456" selection-end-column="121" />
+        <state relative-caret-position="391">
+          <caret line="449" column="23" lean-forward="true" selection-start-line="449" selection-start-column="23" selection-end-line="469" selection-end-column="9" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
+            <element signature="e#17938#19123#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="445">
+            <caret line="39" column="9" lean-forward="true" selection-start-line="39" selection-start-column="9" selection-end-line="39" selection-end-column="9" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
         </state>
       </provider>
     </entry>
