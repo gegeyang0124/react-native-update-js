@@ -9,7 +9,6 @@ npm i --save react-native-update-js
 
 ##### HotUpdate 热更新，以下以下方法详细参数请看源文件
 ```javascript
-document.getElementById("dic");
 import {HotUpdate} from "react-native-update-js";
 HotUpdate.host="http://....";//热更新配置文件地址或接口，//get请求
 HotUpdate.checkUpdate();//检查更新
