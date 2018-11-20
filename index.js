@@ -463,6 +463,6 @@ export class HotUpdate{
     }
 }
 
-RNFS.delDir();
+HotUpdate.delDir();
 
 // RNFS.mkdir(HotUpdateCus.wwwDownloadDir);
