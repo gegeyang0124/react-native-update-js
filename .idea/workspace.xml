@@ -63,7 +63,7 @@
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="198">
-              <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="36" />
+              <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="36" />
               <folding>
                 <element signature="e#0#77#0" expanded="true" />
                 <element signature="e#1335#2263#0" expanded="false" />
@@ -100,8 +100,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="209">
-                <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <first_editor relative-caret-position="502">
+                <caret line="85" column="13" lean-forward="false" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -181,8 +181,8 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="54" />
-    <option name="y" value="35" />
+    <option name="x" value="108" />
+    <option name="y" value="74" />
     <option name="width" value="1361" />
     <option name="height" value="796" />
   </component>
@@ -210,22 +210,6 @@
               <item name="react-native-update-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-native-update-js" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="react-native-update-js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-native-update-js" type="462c0819:PsiDirectoryNode" />
-              <item name="ios" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-native-update-js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-native-update-js" type="462c0819:PsiDirectoryNode" />
-              <item name="ios" type="462c0819:PsiDirectoryNode" />
-              <item name="update" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="react-native-update-js" type="b2602c69:ProjectViewProjectNode" />
-              <item name="react-native-update-js" type="462c0819:PsiDirectoryNode" />
-              <item name="lib" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -241,6 +225,9 @@
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Proj\RNProj\react-native-update-js\res" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Proj\RNProj\react-native-update-js\ios" />
     </key>
@@ -274,15 +261,15 @@
       <workItem from="1542332250221" duration="14785000" />
       <workItem from="1542591346918" duration="7000" />
       <workItem from="1542594983801" duration="15817000" />
-      <workItem from="1542691755977" duration="6468000" />
+      <workItem from="1542691755977" duration="8857000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52893000" />
+    <option name="totallyTimeSpent" value="55282000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="54" y="35" width="1361" height="796" extended-state="0" />
+    <frame x="108" y="74" width="1361" height="796" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1732342" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -834,7 +821,7 @@
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
-          <caret line="26" column="36" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="36" />
+          <caret line="26" column="36" lean-forward="false" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="36" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
             <element signature="e#1335#2263#0" expanded="false" />
@@ -869,8 +856,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="209">
-            <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <first_editor relative-caret-position="502">
+            <caret line="85" column="13" lean-forward="false" selection-start-line="85" selection-start-column="13" selection-end-line="85" selection-end-column="13" />
             <folding />
           </first_editor>
           <second_editor>

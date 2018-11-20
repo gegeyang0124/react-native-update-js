@@ -25,8 +25,8 @@ npm i --save react-native-update-js
   // ... 其它代码
 }
 ```
-react-native bundle --entry-file index.js --bundle-output ./ios/main.jsbundle --platform ios --assets-dest ./ios --dev false
-##### HotUpdate 热更新，以下以下方法详细参数请看源文件
+
+##### HotUpdate 热更新，以下以下方法详细参数请看源文件,里面有详细注解
 ```javascript
 import {HotUpdate} from "react-native-update-js";
 HotUpdate.host="http://....";//热更新配置文件地址或接口，//get请求
@@ -53,10 +53,34 @@ HotUpdate.doUpdate();//更新重载应用
                         "version": "2.0.140",//js的版本号，只能增大
                         "metaInfo":{//元信息可在里面自定义一些数据，js的版本，更新时回传
                         },
-                        "updateUrl": "http://yyt.lexin580.com:8081/app_config/lx_yyt_app.zip" //js包
+                        "updateUrl": "http://yyt.yyy.com:8081/app_config/lx_yyt_app.zip" //js包
                     }
                 ]
 
         }
 }
 ```
+
+## 热更新发布
+执行js打包命令：<br>
+
+##### ios:<br>
+react-native bundle --entry-file index.js --bundle-output ./ios/main.jsbundle --platform ios --assets-dest ./ios --dev false
+
+#### android:<br>
+react-native bundle --entry-file index.js --bundle-output ./android/app/src/main/assets/index.android.jsbundle --platform android --assets-dest ./android/app/src/main/res/ --dev false
+
+找到ios下打包的文件和文件夹;分别是ios下的文件夹assets，文件main.jsbundle和main.jsbundle.meta;
+将他们复制到一个文件夹下压缩成zip文件，放到自己的服务器上，将下载地址放到updateUrl的字段里即可。
+<br>
+
+<br>
+以上的“热更新发布”是按我的打包命令，生成文件的路径找到的，具体路径，看你自己的打包命令的生成路径；
+如以上ios的assets:--assets-dest ./ios,在ios的目录下；main.jsbundle和main.jsbundle.meta： --bundle-output ./ios/main.jsbundle
+也在ios的目录下
+<br>
+Android 同理
+
+<br>
+也可以在命令执行后看命令输出目录：
+![示例](./res/cmd.png)
