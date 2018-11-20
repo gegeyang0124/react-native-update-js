@@ -8,7 +8,8 @@ npm i --save react-native-update-js
 [npm i --save react-native-zip-archive 解压缩组件](https://github.com/plrthink/react-native-zip-archive)<BR/>
 
 ##### HotUpdate 热更新，以下以下方法详细参数请看源文件
-```
+```javascript
+document.getElementById("dic");
 import {HotUpdate} from "react-native-update-js";
 HotUpdate.host="http://....";//热更新配置文件地址或接口，//get请求
 HotUpdate.checkUpdate();//检查更新
@@ -17,7 +18,7 @@ HotUpdate.doUpdate();//更新重载应用
 ```
 
 ##### HotUpdate 的后台配置，（配置后台文件或接口，自由选择）例如下列示例
-```
+```javascript
 {
             "ios-lx_yyt-2.0.7":{//这key是这样设置,ios："ios-" + HotUpdate.tag + "-" + packageVersion = "lx_yyt-2.0.7";android："android-" + HotUpdate.tag + "-" + packageVersion = "lx_yyt-2.0.7";
                 "tag":"lx_yyt",//app设置的标识 ，HotUpdate.tag="lx_yyt"设置的一致
