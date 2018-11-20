@@ -74,6 +74,8 @@ react-native bundle --entry-file index.js --bundle-output ./android/app/src/main
 找到ios下打包的文件和文件夹;分别是ios下的文件夹assets，文件main.jsbundle和main.jsbundle.meta;
 将他们复制到一个文件夹下压缩成zip文件，放到自己的服务器上，将下载地址放到updateUrl的字段里即可。
 <BR/>
+Android 同理
+<BR/>
 
 <BR/>
 以上的“热更新发布”是按我的打包命令，生成文件的路径找到的，具体路径，看你自己的打包命令的生成路径；

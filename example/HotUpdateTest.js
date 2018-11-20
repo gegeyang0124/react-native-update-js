@@ -17,6 +17,7 @@ import {LocalStorage} from "./LocalStorage";
 import {ProgressPerApi} from "./ProgressPerApi";
 
 HotUpdate.tag = "lx_yyt";//热更新的标志 与后台配置一致
+HotUpdate.host = "http://yyt.yyy.com:8081/XXX/XXX";//数据请求接口
 
 /**
  * 热更新，提供热更新各种方法,自己配置服务器
