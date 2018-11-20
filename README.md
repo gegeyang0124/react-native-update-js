@@ -7,10 +7,30 @@ npm i --save react-native-update-js
 [npm i --save react-native-fs 文件操作组件](https://github.com/itinance/react-native-fs)<BR/>
 [npm i --save react-native-zip-archive 解压缩组件](https://github.com/plrthink/react-native-zip-archive)<BR/>
 
+## 配置
+在项目目录的node_modules/save react-native-update-js/ios下找到update文件夹
+将文件夹拖入你的项目ios项目，然后打开AppDelegate.m文件,按下列代码写入
+```cpp
+#import "UpateAppJs.h"
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+#if DEBUG
+  // 原来的jsCodeLocation保留在这里
+  jsCodeLocation = ..........
+#else
+  // 非DEBUG情况下启用热更新
+  jsCodeLocation=[UpateAppJs bundleURL];
+#endif
+  // ... 其它代码
+}
+```
+react-native bundle --entry-file index.js --bundle-output ./ios/main.jsbundle --platform ios --assets-dest ./ios --dev false
 ##### HotUpdate 热更新，以下以下方法详细参数请看源文件
 ```javascript
 import {HotUpdate} from "react-native-update-js";
 HotUpdate.host="http://....";//热更新配置文件地址或接口，//get请求
+HotUpdate.tag = "";//热更新的标志 与后台配置一致 必须设置 默认为"''"
 HotUpdate.checkUpdate();//检查更新
 HotUpdate.downloadUpdate();//下载更新
 HotUpdate.doUpdate();//更新重载应用
