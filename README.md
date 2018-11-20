@@ -61,26 +61,28 @@ HotUpdate.doUpdate();//更新重载应用
 }
 ```
 
-## 热更新发布
-执行js打包命令：<br>
 
-##### ios:<br>
+## 热更新发布
+执行js打包命令：<BR/>
+
+##### ios:<BR/>
 react-native bundle --entry-file index.js --bundle-output ./ios/main.jsbundle --platform ios --assets-dest ./ios --dev false
 
-#### android:<br>
+#### android:<BR/>
 react-native bundle --entry-file index.js --bundle-output ./android/app/src/main/assets/index.android.jsbundle --platform android --assets-dest ./android/app/src/main/res/ --dev false
 
 找到ios下打包的文件和文件夹;分别是ios下的文件夹assets，文件main.jsbundle和main.jsbundle.meta;
 将他们复制到一个文件夹下压缩成zip文件，放到自己的服务器上，将下载地址放到updateUrl的字段里即可。
-<br>
+<BR/>
 
-<br>
+<BR/>
 以上的“热更新发布”是按我的打包命令，生成文件的路径找到的，具体路径，看你自己的打包命令的生成路径；
 如以上ios的assets:--assets-dest ./ios,在ios的目录下；main.jsbundle和main.jsbundle.meta： --bundle-output ./ios/main.jsbundle
 也在ios的目录下
-<br>
+<BR/>
 Android 同理
+<BR/>
+也可以在命令执行后看命令输出目录：<BR/>
 
-<br>
-也可以在命令执行后看命令输出目录：
 ![示例命令图](https://github.com/gegeyang0124/react-native-update-js/blob/master/res/cmd.png)
+
