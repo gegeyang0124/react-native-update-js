@@ -88,4 +88,6 @@ Android 同理
 
 ![示例命令图](https://github.com/gegeyang0124/react-native-update-js/blob/master/res/cmd.png)
 
-## [示列代码](https://github.com/gegeyang0124/react-native-update-js/blob/master/example)
+##### [示列代码](https://github.com/gegeyang0124/react-native-update-js/blob/master/example/HotUpdateTest.js)
+
+### [我的博客](http://blog.sina.com.cn/s/articlelist_6078695441_0_1.html)
