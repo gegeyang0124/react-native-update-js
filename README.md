@@ -36,7 +36,7 @@ HotUpdate.downloadUpdate();//下载更新
 HotUpdate.doUpdate();//更新重载应用
 ```
 
-##### HotUpdate 的后台配置，（配置后台文件或接口，自由选择）例如下列示例
+##### HotUpdate 的后台配置，（配置后台文件或接口，自由选择）例如下列示例(有一个我测试放在后台的json文件，在[lib文件夹](https://github.com/gegeyang0124/react-native-update-js/blob/master/lib/update.json)下，可参考)
 ```javascript
 {
             "ios-lx_yyt-2.0.7":{//这key是这样设置,ios："ios-" + HotUpdate.tag + "-" + packageVersion = "lx_yyt-2.0.7";android："android-" + HotUpdate.tag + "-" + packageVersion = "lx_yyt-2.0.7";
