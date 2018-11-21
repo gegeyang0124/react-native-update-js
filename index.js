@@ -84,11 +84,11 @@ export class HotUpdate{
                                     };
                                     HotUpdate.updateInfo = Object.assign({},HotUpdate.updateInfo, info.publishJS[0]);
                                     console.info("updateInfo:",HotUpdate.updateInfo);
-                                    resolve(HotUpdate.updateInfo);
+                                    resolve&&resolve(HotUpdate.updateInfo);
                                 }
                                 else
                                 {
-                                    reject();
+                                    reject&&reject();
                                 }
                             }
                             else
@@ -101,12 +101,12 @@ export class HotUpdate{
                                     metaInfoPkg:info.metaInfoPkg //元信息可在里面自定义一些数据,app的静态版本(硬版本)，更新时回传
                                 };
                                 console.info("updateInfo:",HotUpdate.updateInfo);
-                                resolve(HotUpdate.updateInfo);
+                                resolve&&resolve(HotUpdate.updateInfo);
                             }
                         }
                         else
                         {
-                            reject();
+                            reject&&reject();
                         }
                     });
             }
@@ -218,7 +218,7 @@ export class HotUpdate{
                             if(!exist || isReDownload){
                                 if(fileAddress == undefined)
                                 {
-                                    reject();
+                                    reject&&reject();
                                 }
 
                                 // 音频
@@ -259,22 +259,22 @@ export class HotUpdate{
                                         console.log("-----------------------------------------downloadFile " + fileAddress + " success end-------------------------------------");
 
                                         retJson["filePath"] = downloadDest;
-                                        resolve(retJson);
+                                        resolve&&resolve(retJson);
 
                                     }).catch(err => {
                                         //console.log('err', err);
-                                        reject(err);
+                                        reject&&reject(err);
                                     });
                                 }
                                 catch (e) {
                                     //console.log(error);
-                                    reject(e);
+                                    reject&&reject(e);
                                 }
                             }
                             else
                             {
                                 // Tools.toast("文件已存在");
-                                resolve({
+                                resolve&&resolve({
                                     filePath:downloadDest
                                 });
                             }
@@ -314,15 +314,15 @@ export class HotUpdate{
             if(path){
                 RNFS.unlink(path).then(() => {
                     console.info('FILE DELETED success',"success");
-                    resolve(path);
+                    resolve&&resolve(path);
                 }).catch((err) => {
                     console.info('FILE DELETED err',err);
-                    resolve(path);
+                    resolve&&resolve(path);
                 });
             }
             else
             {
-                resolve(path);
+                resolve&&resolve(path);
             }
         });
     }
@@ -343,7 +343,7 @@ export class HotUpdate{
                         console.log("-----------------------------------------httpAjax " + url + " Timeout end-------------------------------------");
 
                         // TalkingData.trackEventHttp("Timeout",url,type);
-                        reject({status:"Timeout"});
+                        reject&&reject({status:"Timeout"});
                     }
                 },
                 15000);
@@ -363,13 +363,13 @@ export class HotUpdate{
                     console.log("-----------------------------------------httpAjax " + url + " success start-------------------------------------");
                     console.info('success', request.responseText);
                     console.log("-----------------------------------------httpAjax " + url + " success end-------------------------------------");
-                    resolve(request.responseText);
+                    resolve&&resolve(request.responseText);
                     //alert(request.responseText)
                 } else {
                     console.log("-----------------------------------------httpAjax " + url + " err start-------------------------------------");
                     console.log('err');
                     console.log("-----------------------------------------httpAjax " + url + " err end-------------------------------------");
-                    reject({status:-1});
+                    reject&&reject({status:-1});
                 }
             };
 
