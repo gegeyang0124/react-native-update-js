@@ -388,23 +388,30 @@ export class HotUpdate{
      * **/
     static delDir(){
         if(RNFS.readDir){
-            RNFS.readDir(this.sourceDir)
-                .then((files)=>{
-                    let path = null;
-                    if(mainBundleFilePath)
+            RNFS.exists(this.sourceDir)
+                .then((exist) =>{
+                    if(exist)
                     {
-                        mainBundleFilePath.substring(0,mainBundleFilePath.lastIndexOf("/"))
-                    }
-                    if(path){
-                        path = path.substring(0,path.lastIndexOf("/"));
-                    }
+                        RNFS.readDir(this.sourceDir)
+                            .then((files)=>{
+                                let path = null;
+                                if(mainBundleFilePath)
+                                {
+                                    mainBundleFilePath.substring(0,mainBundleFilePath.lastIndexOf("/"))
+                                }
+                                if(path){
+                                    path = path.substring(0,path.lastIndexOf("/"));
+                                }
 
-                    files.forEach((v,i,a)=>{
-                        if(v.path != path){
-                            this.deleteDirOrFile(v.path);
-                        }
-                    });
+                                files.forEach((v,i,a)=>{
+                                    if(v.path != path){
+                                        this.deleteDirOrFile(v.path);
+                                    }
+                                });
+                            });
+                    }
                 });
+
         }
     }
 
