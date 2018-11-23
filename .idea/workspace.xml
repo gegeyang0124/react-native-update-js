@@ -4,6 +4,7 @@
     <list default="true" id="815e51bc-5c54-46dd-b63a-4592f935fceb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
+      <change beforePath="$PROJECT_DIR$/ios/update/UpateAppJs.m" afterPath="$PROJECT_DIR$/ios/update/UpateAppJs.m" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -14,26 +15,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="DockManager">
-    <window id="1">
-      <content type="file-editors">
-        <state>
-          <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-            <file leaf-file-name="update.json" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/lib/update.json">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="304">
-                    <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-439289939">
@@ -70,11 +51,9 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
-              <folding>
-                <element signature="e#318#451#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="361">
+              <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -82,22 +61,21 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2248">
-              <caret line="482" column="43" lean-forward="false" selection-start-line="482" selection-start-column="43" selection-end-line="482" selection-end-column="43" />
+            <state relative-caret-position="595">
+              <caret line="504" column="43" lean-forward="false" selection-start-line="504" selection-start-column="43" selection-end-line="504" selection-end-column="43" />
               <folding>
                 <element signature="e#0#77#0" expanded="true" />
-                <element signature="e#1335#2263#0" expanded="false" />
-                <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!doc;n#delDir#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#delDir#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!doc;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!doc;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
-                <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
-                <element signature="e#18427#19612#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UpateAppJs.m" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ios/update/UpateAppJs.m">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="144">
+              <caret line="153" column="7" lean-forward="true" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -116,8 +94,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="874">
-                <caret line="46" column="28" lean-forward="false" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="28" />
+              <first_editor relative-caret-position="760">
+                <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="60" selection-end-column="1" />
                 <folding />
               </first_editor>
               <second_editor>
@@ -157,12 +135,12 @@
         <option value="$PROJECT_DIR$/testService.json" />
         <option value="$PROJECT_DIR$/lib.js" />
         <option value="$PROJECT_DIR$/lib/Loadding.js" />
-        <option value="$PROJECT_DIR$/ios/update/UpateAppJs.m" />
         <option value="$PROJECT_DIR$/example/HotUpdateTest.js" />
         <option value="$PROJECT_DIR$/../FileSystem.js" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/lib/update.json" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/ios/update/UpateAppJs.m" />
         <option value="$PROJECT_DIR$/index.js" />
       </list>
     </option>
@@ -191,9 +169,9 @@
       <path value="$PROJECT_DIR$/package.json" />
     </packageJsonPaths>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="108" />
-    <option name="y" value="74" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="427" />
+    <option name="y" value="90" />
     <option name="width" value="1361" />
     <option name="height" value="796" />
   </component>
@@ -213,6 +191,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -228,6 +207,17 @@
             <path>
               <item name="react-native-update-js" type="b2602c69:ProjectViewProjectNode" />
               <item name="react-native-update-js" type="462c0819:PsiDirectoryNode" />
+              <item name="ios" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-native-update-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-native-update-js" type="462c0819:PsiDirectoryNode" />
+              <item name="ios" type="462c0819:PsiDirectoryNode" />
+              <item name="update" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="react-native-update-js" type="b2602c69:ProjectViewProjectNode" />
+              <item name="react-native-update-js" type="462c0819:PsiDirectoryNode" />
               <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -235,7 +225,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -287,28 +276,31 @@
       <workItem from="1542781133976" duration="1609000" />
       <workItem from="1542782888830" duration="9000" />
       <workItem from="1542791388420" duration="657000" />
-      <workItem from="1542869717244" duration="596000" />
+      <workItem from="1542869717244" duration="1816000" />
+      <workItem from="1542872666236" duration="102000" />
+      <workItem from="1542941192559" duration="392000" />
+      <workItem from="1542968778663" duration="167000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59432000" />
+    <option name="totallyTimeSpent" value="61313000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="108" y="74" width="1361" height="796" extended-state="1" />
+    <frame x="427" y="90" width="1361" height="796" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1724907" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -343,7 +335,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -364,9 +355,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-          <folding>
-            <element signature="e#318#451#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -389,7 +378,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -399,17 +387,6 @@
           <caret line="465" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="467" selection-end-column="43" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#1335#2263#0" expanded="false" />
-            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#18427#19612#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -418,9 +395,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-          <folding>
-            <element signature="e#318#451#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -428,7 +403,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -438,17 +412,6 @@
           <caret line="116" column="48" lean-forward="false" selection-start-line="116" selection-start-column="48" selection-end-line="116" selection-end-column="48" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#1335#2263#0" expanded="false" />
-            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#18427#19612#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -457,9 +420,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-          <folding>
-            <element signature="e#318#451#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -467,7 +428,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -477,17 +437,6 @@
           <caret line="93" column="6" lean-forward="true" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#1335#2263#0" expanded="false" />
-            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#18427#19612#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -496,9 +445,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding>
-            <element signature="e#318#451#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -508,17 +455,6 @@
           <caret line="217" column="33" lean-forward="true" selection-start-line="217" selection-start-column="33" selection-end-line="217" selection-end-column="33" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#1335#2263#0" expanded="false" />
-            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#18427#19612#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -552,17 +488,6 @@
           <caret line="114" column="13" lean-forward="false" selection-start-line="114" selection-start-column="7" selection-end-line="114" selection-end-column="13" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#1335#2263#0" expanded="false" />
-            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#18427#19612#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -585,9 +510,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="22" column="5" lean-forward="false" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="e#318#451#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -595,9 +518,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="22" column="17" lean-forward="false" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding>
-            <element signature="e#318#451#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -607,17 +528,6 @@
           <caret line="217" column="33" lean-forward="true" selection-start-line="217" selection-start-column="33" selection-end-line="217" selection-end-column="33" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#1335#2263#0" expanded="false" />
-            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#18427#19612#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -643,9 +553,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="247">
           <caret line="26" column="4" lean-forward="false" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="4" />
-          <folding>
-            <element signature="e#318#451#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -666,7 +574,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="1" lean-forward="false" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -691,17 +598,6 @@
           <caret line="296" column="5" lean-forward="true" selection-start-line="296" selection-start-column="5" selection-end-line="296" selection-end-column="5" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#1335#2263#0" expanded="false" />
-            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#18427#19612#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -724,13 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ios/update/UpateAppJs.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1726">
-          <caret line="171" column="0" lean-forward="true" selection-start-line="171" selection-start-column="0" selection-end-line="171" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/example/HotUpdateTest.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
@@ -740,11 +629,26 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../FileSystem.js" />
+    <entry file="file://$PROJECT_DIR$/lib/update.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="9" lean-forward="false" selection-start-line="19" selection-start-column="9" selection-end-line="19" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="874">
-            <caret line="46" column="28" lean-forward="false" selection-start-line="46" selection-start-column="17" selection-end-line="46" selection-end-column="28" />
+          <first_editor relative-caret-position="760">
+            <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="60" selection-end-column="1" />
             <folding />
           </first_editor>
           <second_editor>
@@ -753,42 +657,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
+    <entry file="file://$PROJECT_DIR$/ios/update/UpateAppJs.m">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
-          <folding>
-            <element signature="e#318#451#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="144">
+          <caret line="153" column="7" lean-forward="true" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2248">
-          <caret line="482" column="43" lean-forward="false" selection-start-line="482" selection-start-column="43" selection-end-line="482" selection-end-column="43" />
+        <state relative-caret-position="595">
+          <caret line="504" column="43" lean-forward="false" selection-start-line="504" selection-start-column="43" selection-end-line="504" selection-end-column="43" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
-            <element signature="e#1335#2263#0" expanded="false" />
-            <element signature="n#!!block;n#requestAjax#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#delDir#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#setPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#getPreferData#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!doc;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="n#!!block;n#service#0;n#HotUpdate#0" expanded="false" />
-            <element signature="e#18427#19612#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/update.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>

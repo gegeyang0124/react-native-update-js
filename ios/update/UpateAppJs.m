@@ -35,6 +35,7 @@ RCT_EXPORT_MODULE()
     - (id)init{
   packageVersion = [[self class] packageVersion];
 userPrefer = [NSUserDefaults standardUserDefaults];
+
 return self;
 }
 
@@ -44,6 +45,9 @@ return self;
 NSString *lastVersionCode = [userDefaults objectForKey:paramLastVersionCode];
 NSString *versionCode = [userDefaults objectForKey:paramVersionCode];
 NSString *bundleJsPath = [userDefaults objectForKey:paramBundleJsPath];
+if(bundleJsPath){
+  bundleJsPath = [[self DocumentFilePath] stringByAppendingString:bundleJsPath];
+}
 NSURL *bundle = nil;
 
 if(versionCode && ![lastVersionCode isEqualToString:versionCode]){
@@ -135,12 +139,28 @@ RCT_EXPORT_METHOD(reload){
 **/
 - (NSDictionary *)constantsToExport
 {
-  NSMutableDictionary *ret = [NSMutableDictionary new];
+[[self class] bundleURL];
+
+NSMutableDictionary *ret = [NSMutableDictionary new];
 ret[@"currentVersion"] = currentVersion;
 ret[@"packageVersion"] = packageVersion;
 ret[@"mainBundleFilePath"] = mainBundleFilePath;
 
 return ret;
+}
+
+/**
+获取即时版本信息
+    **/
+RCT_EXPORT_METHOD(getAppInfo:(RCTResponseSenderBlock)callback)
+{
+  NSMutableDictionary *ret = [NSMutableDictionary new];
+ret[@"currentVersion"] = currentVersion;
+ret[@"packageVersion"] = packageVersion;
+ret[@"mainBundleFilePath"] = mainBundleFilePath;
+
+callback(@[ret]);
+
 }
 
 /**
@@ -161,11 +181,13 @@ return version;
 }
 
 + (NSString *)DocumentFilePath{
-  return [[NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0] stringByAppendingString:@"/"];
+  return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+//  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//  return [paths firstObject];
 }
 
 + (NSString *)MainBundleFilePath {
-  return [[UpateAppJs DocumentFilePath] stringByAppendingString:@"www/index.ios.bundle"];
+  return [[UpateAppJs DocumentFilePath] stringByAppendingString:@"/www/index.ios.bundle"];
 }
 
 @end

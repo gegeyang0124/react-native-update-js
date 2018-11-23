@@ -10,8 +10,8 @@ import RNFS from "react-native-fs";
 const HotUpdateJs = NativeModules.UpateAppJs;
 
 export const packageVersion = HotUpdateJs.packageVersion;//app的静态版本(硬版本)号，即编译时设置的版本号，此发生变化就会去下载新的静态版本(硬版本)
-export const currentVersion = HotUpdateJs.currentVersion;//动态版本号，即当前运行的js程序的js版本号
-export const mainBundleFilePath = HotUpdateJs.mainBundleFilePath;//js代码路径 指向main.jsbundle
+export var currentVersion = HotUpdateJs.currentVersion;//动态版本号，即当前运行的js程序的js版本号
+export var mainBundleFilePath = HotUpdateJs.mainBundleFilePath;//js代码路径 指向main.jsbundle
 export const Loadding = require("./lib/LoaddingIndicator").default;
 
 /**
@@ -28,9 +28,10 @@ export class HotUpdate{
     static downloadDir = Platform.OS == "ios"
         ? `${RNFS.DocumentDirectoryPath}/wwwDown`
         : `${RNFS.ExternalStorageDirectoryPath}/wwwDown`;//下载目录
+    static WWWROOT = "/wwwRoot";
     static sourceDir = Platform.OS == "ios"
-        ? `${RNFS.DocumentDirectoryPath}/wwwRoot`
-        : `${RNFS.ExternalStorageDirectoryPath}/wwwRoot`;//js程序资源目录
+        ? `${RNFS.DocumentDirectoryPath}`
+        : `${RNFS.ExternalStorageDirectoryPath}`;//js程序资源目录
     static updateInfo = {};//更新数据信息
 
     /**
@@ -139,20 +140,22 @@ export class HotUpdate{
      * **/
     static doUpdate(info,isReload=true){
         Loadding.show(true,"正在配置...");
-        let unzipPath = this.sourceDir + "/" + new Date().getTime();
 
+        let www = this.WWWROOT + "/" + new Date().getTime();
+        let unzipPath = this.sourceDir + www;
         RNFS.mkdir(unzipPath).then(()=>{
             unzip(info.filePath, unzipPath)
                 .then((path) => {
                     console.info('info:',info);
                     console.info('unzip completed:',path);
 
-                    let sourceDir = "/" + info.filePath.substring(
-                        info.filePath.lastIndexOf("/") + 1,
-                        info.filePath.lastIndexOf(".")
-                    );
-                    sourceDir = unzipPath + sourceDir;
-                    this.setVersion(info.version,sourceDir)
+                    /*  let srcDir = "/" + info.filePath.substring(
+                          info.filePath.lastIndexOf("/") + 1,
+                          info.filePath.lastIndexOf(".")
+                      );
+                      www = www + srcDir;*/
+
+                    this.setVersion(info.version,www)
                         .then(()=>{
                             Loadding.hide();
                             if(isReload){
@@ -292,7 +295,6 @@ export class HotUpdate{
      **/
     static setVersion(versionCode:string,bundleJsPath:string){
         return HotUpdateJs.setVersion(versionCode,bundleJsPath);
-
     }
 
     /**
@@ -313,10 +315,10 @@ export class HotUpdate{
         return new Promise((resolve, reject) => {
             if(path){
                 RNFS.unlink(path).then(() => {
-                    console.info('FILE DELETED success',"success");
+                    console.info('FILE DELETED success',path);
                     resolve&&resolve(path);
                 }).catch((err) => {
-                    console.info('FILE DELETED err',err);
+                    console.info('FILE DELETED err',path);
                     resolve&&resolve(path);
                 });
             }
@@ -387,32 +389,38 @@ export class HotUpdate{
      * 删除目录下得一级目录和文件
      * **/
     static delDir(){
-        if(RNFS.readDir){
-            RNFS.exists(this.sourceDir)
-                .then((exist) =>{
-                    if(exist)
-                    {
-                        RNFS.readDir(this.sourceDir)
-                            .then((files)=>{
-                                let path = null;
-                                if(mainBundleFilePath)
-                                {
-                                    mainBundleFilePath.substring(0,mainBundleFilePath.lastIndexOf("/"))
-                                }
-                                if(path){
-                                    path = path.substring(0,path.lastIndexOf("/"));
-                                }
+        this.getAppInfo()
+            .then((appInfo)=>{
+                if(RNFS.readDir){
+                    let dir = this.sourceDir + this.WWWROOT;
+                    RNFS.exists(dir)
+                        .then((exist) =>{
+                            if(exist)
+                            {
+                                RNFS.readDir(dir)
+                                    .then((files)=>{
+                                        // console.info("files:",files)
 
-                                files.forEach((v,i,a)=>{
-                                    if(v.path != path){
-                                        this.deleteDirOrFile(v.path);
-                                    }
-                                });
-                            });
-                    }
-                });
+                                        let path = null;
+                                        if(mainBundleFilePath)
+                                        {
+                                            path = mainBundleFilePath.substring(0,mainBundleFilePath.lastIndexOf("/"));
+                                        }
+                                        // console.info("path:",path);
+                                        // console.info("path:",mainBundleFilePath);
 
-        }
+                                        files.forEach((v,i,a)=>{
+                                            if(v.path != path){
+                                                this.deleteDirOrFile(v.path);
+                                            }
+                                        });
+                                    });
+                            }
+                        });
+
+                }
+            });
+
     }
 
     /**
@@ -430,6 +438,20 @@ export class HotUpdate{
      * **/
     static getPreferData(key:string){
         return HotUpdateJs.getPreferData(key);
+    }
+
+    /**
+     *  获取即时版本信息
+     * **/
+    static  getAppInfo(){
+        return new Promise(resolve => {
+            // console.info("mainBundleFilePath:",mainBundleFilePath);
+            HotUpdateJs.getAppInfo((info)=>{
+                // console.info("app info",info)
+                resolve(info);
+            });
+        });
+
     }
 
     /**
