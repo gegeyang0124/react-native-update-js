@@ -441,7 +441,7 @@ export class HotUpdate{
     }
 
     /**
-     *  获取即时版本信息
+     *  获取更新即时版本信息
      * **/
     static  getAppInfo(){
         return new Promise(resolve => {
