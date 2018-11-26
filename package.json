@@ -1,6 +1,6 @@
 {
   "name": "react-native-update-js",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "热更新组件",
   "main": "index.js",
   "scripts": {
