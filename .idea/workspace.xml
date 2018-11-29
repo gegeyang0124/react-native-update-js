@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="815e51bc-5c54-46dd-b63a-4592f935fceb" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/index.js" afterPath="$PROJECT_DIR$/index.js" />
+      <change beforePath="$PROJECT_DIR$/ios/update/UpateAppJs.m" afterPath="$PROJECT_DIR$/ios/update/UpateAppJs.m" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -49,31 +51,22 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
+            <state relative-caret-position="0">
               <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8284">
-              <caret line="443" column="18" lean-forward="false" selection-start-line="443" selection-start-column="8" selection-end-line="443" selection-end-column="18" />
+            <state relative-caret-position="494">
+              <caret line="519" column="0" lean-forward="true" selection-start-line="519" selection-start-column="0" selection-end-line="519" selection-end-column="0" />
               <folding>
                 <element signature="e#0#77#0" expanded="true" />
+                <element signature="n#HotUpdate#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UpateAppJs.m" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ios/update/UpateAppJs.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2907">
-              <caret line="153" column="7" lean-forward="false" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -88,7 +81,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
@@ -137,9 +130,9 @@
         <option value="$PROJECT_DIR$/../FileSystem.js" />
         <option value="$PROJECT_DIR$/lib/update.json" />
         <option value="$PROJECT_DIR$/ios/update/UpateAppJs.m" />
-        <option value="$PROJECT_DIR$/index.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/index.js" />
       </list>
     </option>
   </component>
@@ -189,7 +182,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -223,21 +215,23 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../react-native-lib-cus-com" />
     <property name="settings.editor.selected.configurable" value="Settings.JavaScript.Bower" />
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Proj\RNProj\react-native-update-js\ios\update" />
+      <recent name="E:\Proj\RNProj\react-native-update-js\ios" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\Proj\RNProj\react-native-update-js\res" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\Proj\RNProj\react-native-update-js\ios" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -278,12 +272,15 @@
       <workItem from="1542872666236" duration="102000" />
       <workItem from="1542941192559" duration="392000" />
       <workItem from="1542968778663" duration="1298000" />
-      <workItem from="1543201440236" duration="123000" />
+      <workItem from="1543201440236" duration="153000" />
+      <workItem from="1543202473515" duration="664000" />
+      <workItem from="1543460721172" duration="620000" />
+      <workItem from="1543475801533" duration="557000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62567000" />
+    <option name="totallyTimeSpent" value="64438000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="427" y="90" width="1361" height="796" extended-state="0" />
@@ -386,6 +383,7 @@
           <caret line="465" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="467" selection-end-column="43" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
+            <element signature="n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -411,6 +409,7 @@
           <caret line="116" column="48" lean-forward="false" selection-start-line="116" selection-start-column="48" selection-end-line="116" selection-end-column="48" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
+            <element signature="n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -436,6 +435,7 @@
           <caret line="93" column="6" lean-forward="true" selection-start-line="93" selection-start-column="6" selection-end-line="93" selection-end-column="6" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
+            <element signature="n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -454,6 +454,7 @@
           <caret line="217" column="33" lean-forward="true" selection-start-line="217" selection-start-column="33" selection-end-line="217" selection-end-column="33" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
+            <element signature="n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -487,6 +488,7 @@
           <caret line="114" column="13" lean-forward="false" selection-start-line="114" selection-start-column="7" selection-end-line="114" selection-end-column="13" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
+            <element signature="n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -527,6 +529,7 @@
           <caret line="217" column="33" lean-forward="true" selection-start-line="217" selection-start-column="33" selection-end-line="217" selection-end-column="33" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
+            <element signature="n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -597,6 +600,7 @@
           <caret line="296" column="5" lean-forward="true" selection-start-line="296" selection-start-column="5" selection-end-line="296" selection-end-column="5" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
+            <element signature="n#HotUpdate#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -635,27 +639,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ios/update/UpateAppJs.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2907">
-          <caret line="153" column="7" lean-forward="false" selection-start-line="153" selection-start-column="7" selection-end-line="153" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8284">
-          <caret line="443" column="18" lean-forward="false" selection-start-line="443" selection-start-column="8" selection-end-line="443" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#77#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
+        <state relative-caret-position="0">
           <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
           <folding />
         </state>
@@ -671,6 +657,25 @@
           <second_editor>
             <markdownNavigatorState />
           </second_editor>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ios/update/UpateAppJs.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1759">
+          <caret line="153" column="4" lean-forward="true" selection-start-line="153" selection-start-column="4" selection-end-line="153" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="519" column="0" lean-forward="true" selection-start-line="519" selection-start-column="0" selection-end-line="519" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#77#0" expanded="true" />
+            <element signature="n#HotUpdate#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -7,15 +7,19 @@ import {
 import { zip, unzip, unzipAssets, subscribe } from 'react-native-zip-archive';
 import RNFS from "react-native-fs";
 
-const HotUpdateJs = NativeModules.UpateAppJs;
+const HotUpdateJs = NativeModules.UpateAppJs ?  NativeModules.UpateAppJs :{};
 
 export const packageVersion = HotUpdateJs.packageVersion;//app的静态版本(硬版本)号，即编译时设置的版本号，此发生变化就会去下载新的静态版本(硬版本)
 export var currentVersion = HotUpdateJs.currentVersion;//动态版本号，即当前运行的js程序的js版本号
 export var mainBundleFilePath = HotUpdateJs.mainBundleFilePath;//js代码路径 指向main.jsbundle
+export const markSuccess = HotUpdateJs.markSuccess;// 标记更新成功，若js无bug则标记成功，若有bug则回滚到前一个js版本
+export const bundleJsPathCur = HotUpdateJs.bundleJsPathCur;// 当前运行js版本的相对路径
+export const bundleJsPathLast = HotUpdateJs.bundleJsPathLast;// 上一个前运行js版本的相对路径
 export const Loadding = require("./lib/LoaddingIndicator").default;
 
 /**
  * 热更新，提供热更新各种方法,自己配置服务器
+ * 若有bug导致应用直接崩溃，则js代码版本自动回滚到前一个版本
  * **/
 export class HotUpdate{
 
@@ -410,12 +414,15 @@ export class HotUpdate{
                                         // console.info("path:",mainBundleFilePath);
 
                                         files.forEach((v,i,a)=>{
-                                            if(v.path != path){
+                                            if(v.path != path
+                                                && v.path.indexOf(bundleJsPathLast) == -1){
                                                 this.deleteDirOrFile(v.path);
                                             }
                                         });
                                     });
                             }
+
+                            markSuccess&&markSuccess();
                         });
 
                 }
@@ -429,7 +436,7 @@ export class HotUpdate{
      * @prama value stirng;//偏好值的值value
      * **/
     static setPreferData(key:string,value:string){
-        return HotUpdateJs.setPreferData(key,value);
+        return HotUpdateJs.setPreferData && HotUpdateJs.setPreferData(key,value);
     }
 
     /**
@@ -437,19 +444,28 @@ export class HotUpdate{
      * @prama key stirng;//偏好值的键key
      * **/
     static getPreferData(key:string){
-        return HotUpdateJs.getPreferData(key);
+        return HotUpdateJs.getPreferData && HotUpdateJs.getPreferData(key);
     }
 
     /**
-     *  获取更新即时版本信息
+     *  获取即时版本信息
+     *  回传数据 {
+           currentVersion，
+           packageVersion，
+           bundleJsPathCur，
+           bundleJsPathLast，
+           mainBundleFilePath，
+     *  }
      * **/
     static  getAppInfo(){
         return new Promise(resolve => {
             // console.info("mainBundleFilePath:",mainBundleFilePath);
-            HotUpdateJs.getAppInfo((info)=>{
-                // console.info("app info",info)
-                resolve(info);
-            });
+            if(HotUpdateJs.getAppInfo){
+                HotUpdateJs.getAppInfo((info)=>{
+                    // console.info("app info",info)
+                    resolve(info);
+                });
+            }
         });
 
     }
