@@ -4,7 +4,6 @@ import {
 
 import {Tools} from "./Tools";
 import {Alert} from "./Alert";
-import RNFS from "react-native-fs";
 
 import {
     packageVersion,
@@ -15,7 +14,7 @@ import {
 import DeviceInfo from "react-native-device-info";
 import {LocalStorage} from "./LocalStorage";
 import {ProgressPerApi} from "./ProgressPerApi";
-
+const HUpdate = require("./HotUpdate").HotUpdate;
 HotUpdate.tag = "lx_yyt";//热更新的标志 与后台配置一致
 HotUpdate.host = "http://yyt.yyy.com:8081/XXX/XXX.json";//数据请求接口或配置文件（get请求）
 
@@ -25,10 +24,6 @@ HotUpdate.host = "http://yyt.yyy.com:8081/XXX/XXX.json";//数据请求接口或�
 export class HotUpdateCus{
 
     static appID = null;//当前给app指定（分配）的id
-
-    static wwwDownloadDir = Platform.OS == "ios"
-        ? `${RNFS.DocumentDirectoryPath}/wwwRoot`
-        : `${RNFS.ExternalStorageDirectoryPath}/wwwRoot`;//下载目录
 
     static update = {
         code1:777,//777、立刻更新；888、立刻强制更新；999、立刻静默更新
@@ -46,12 +41,14 @@ export class HotUpdateCus{
      * 持续检测是否有更新
      * **/
     static checkUpdateLoop(){
-        setInterval(()=>{
-            if(HotUpdateCus.update.execute){
-                // console.info("HotUpdate","HotUpdate");
-                HotUpdateCus.checkUpdate();
-            }
-        },10000);
+        if(!__DEV__){
+            setInterval(()=>{
+                if(HotUpdateCus.update.execute){
+                    // console.info("HotUpdate","HotUpdate");
+                    HotUpdateCus.checkUpdate();
+                }
+            },20000);
+        }
     }
 
     /**
@@ -60,12 +57,23 @@ export class HotUpdateCus{
      * @Param cdUpdate func,//更新回调函数
      * **/
     static checkUpdate = (cd,cdUpdate) => {
-        if(true){
+        HotUpdate.checkUpdate()
+            .then(info=>{
 
-            HotUpdate.checkUpdate()
-                .then(info=>{
+                let rnUpdate = false;
+                if(info.metaInfoPkg && info.metaInfoPkg.rnUpdate != undefined){
+                    if(typeof info.metaInfoPkg.rnUpdate == "boolean" && info.metaInfoPkg.rnUpdate)
+                    {
+                        rnUpdate = true;
+                    }
+                }
 
-                    // alert(JSON.stringify(info))
+                if(rnUpdate){
+                    // HUpdate.checkUpdate();
+                }
+                else
+                {
+                    info.metaInfo = info.metaInfo ? info.metaInfo : {};
                     info.metaInfo.code = typeof info.metaInfo.code == 'number'
                         ? info.metaInfo.code
                         : HotUpdateCus.update.code1;
@@ -73,9 +81,9 @@ export class HotUpdateCus{
                         ? info.metaInfo.reboot
                         : HotUpdateCus.update.reboot1;
 
-                    if(!HotUpdateCus.appID || !Tools.isCurStruct){
-                        // info.metaInfo.code = 888;
-                        // info.metaInfo.reboot = 666;
+                    if(!HotUpdateCus.update.version){
+                        info.metaInfo.code = 888;
+                        info.metaInfo.reboot = 666;
                     }
 
                     if (info.expired) {
@@ -112,6 +120,7 @@ export class HotUpdateCus{
 
                     }
                     else if(info.update){
+
                         HotUpdateCus.checkHasUpate(info,(info)=>{
                             HotUpdateCus.update.execute = false;
 
@@ -151,8 +160,9 @@ export class HotUpdateCus{
                             }
                         },cd);
                     }
-                });
-        }
+                }
+
+            });
     };
 
     /**
@@ -163,7 +173,18 @@ export class HotUpdateCus{
      * @prama index int;info.publishJS的下标 可不传
      * **/
     static checkHasUpate(info,resolve:Function,reject:Function,index=0){
-        if(info.version > HotUpdateCus.update.version){
+        let curVer = HotUpdateCus.update.version
+            ? HotUpdateCus.update.version
+            : Tools.app_config.version;
+        if(curVer){
+            curVer = curVer.split(".").join("");
+            curVer = parseInt(curVer);
+        }
+        let nxtVer = info.version;
+        nxtVer = nxtVer.split(".").join("");
+        nxtVer = parseInt(nxtVer);
+
+        if(!HotUpdateCus.update.version || nxtVer > curVer){
 
             if(this.isHasUpdate(info)){
                 resolve&&resolve(info);
@@ -236,7 +257,6 @@ export class HotUpdateCus{
      * @Param cd func,//回调函数
      * **/
     static doUpdate = (info,cd,reboot) =>{
-
         HotUpdate.downloadUpdate(info,(per)=>{
             ProgressPerApi.show(per);
         })
@@ -250,6 +270,7 @@ export class HotUpdateCus{
                         case HotUpdateCus.update.reboot1:{
                             Alert.alert('提示', '下载完毕,是否重启应用?', [
                                 {text: '是', onPress: ()=>{
+                                        HotUpdate.setPreferData("rnUpdate","false");
                                         Tools.cutLogin = true;
                                         if(!Tools.isCurStruct){
                                             LocalStorage.save(DeviceInfo.getVersion(),
@@ -272,7 +293,7 @@ export class HotUpdateCus{
                                     }
                                 },
                                 {text: '下次启动时更新', onPress: ()=>{
-
+                                        HotUpdate.setPreferData("rnUpdate","false");
                                         HotUpdateCus.update.version = info.version;
                                         HotUpdateCus.update.execute = true;
                                         if(!Tools.isCurStruct){
@@ -294,6 +315,7 @@ export class HotUpdateCus{
                             break;
                         }
                         case HotUpdateCus.update.reboot2:{
+                            HotUpdate.setPreferData("rnUpdate","false");
                             Tools.cutLogin = true;
                             if(!Tools.isCurStruct){
                                 LocalStorage.save(DeviceInfo.getVersion(),
@@ -310,6 +332,7 @@ export class HotUpdateCus{
                             break;
                         }
                         case HotUpdateCus.update.reboot3:{
+                            HotUpdate.setPreferData("rnUpdate","false");
                             if(info.metaInfo.finishInfo){
                                 Alert.alert("更新完成",info.metaInfo.finishInfo+"");
                             }
@@ -342,8 +365,6 @@ export class HotUpdateCus{
         });
     }
 
-
-
 }
 
-// RNFS.mkdir(HotUpdateCus.wwwDownloadDir);
+HotUpdateCus.checkUpdateLoop();

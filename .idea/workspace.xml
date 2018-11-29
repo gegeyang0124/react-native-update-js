@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="815e51bc-5c54-46dd-b63a-4592f935fceb" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/example/HotUpdateTest.js" afterPath="$PROJECT_DIR$/example/HotUpdateTest.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -49,7 +50,7 @@
       <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="38">
               <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
               <folding />
             </state>
@@ -59,8 +60,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="519" column="0" lean-forward="true" selection-start-line="519" selection-start-column="0" selection-end-line="519" selection-end-column="0" />
+            <state relative-caret-position="419">
+              <caret line="519" column="0" lean-forward="false" selection-start-line="519" selection-start-column="0" selection-end-line="519" selection-end-column="0" />
               <folding>
                 <element signature="e#0#77#0" expanded="true" />
                 <element signature="n#HotUpdate#0" expanded="false" />
@@ -72,9 +73,18 @@
       <file leaf-file-name="HotUpdateTest.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/example/HotUpdateTest.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="57">
-              <caret line="19" column="75" lean-forward="false" selection-start-line="19" selection-start-column="75" selection-end-line="19" selection-end-column="75" />
-              <folding />
+            <state relative-caret-position="-95">
+              <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#45#0" expanded="true" />
+                <element signature="n#!!doc;n#checkUpdateLoop#0;n#HotUpdateCus#0" expanded="false" />
+                <element signature="n#!!block;n#checkUpdateLoop#0;n#HotUpdateCus#0" expanded="false" />
+                <element signature="e#1605#6540#0" expanded="false" />
+                <element signature="n#!!block;n#checkHasUpate#0;n#HotUpdateCus#0" expanded="false" />
+                <element signature="e#7262#7736#0" expanded="false" />
+                <element signature="n#!!block;n#isHasUpdate#0;n#HotUpdateCus#0" expanded="false" />
+                <element signature="e#8963#14072#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,7 +93,7 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="38">
+              <first_editor relative-caret-position="-646">
                 <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
                 <folding />
               </first_editor>
@@ -159,10 +169,10 @@
     </packageJsonPaths>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="427" />
-    <option name="y" value="90" />
-    <option name="width" value="1361" />
-    <option name="height" value="796" />
+    <option name="x" value="124" />
+    <option name="y" value="82" />
+    <option name="width" value="927" />
+    <option name="height" value="729" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -212,8 +222,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -273,28 +283,29 @@
       <workItem from="1543201440236" duration="153000" />
       <workItem from="1543202473515" duration="664000" />
       <workItem from="1543460721172" duration="620000" />
-      <workItem from="1543475801533" duration="773000" />
+      <workItem from="1543475801533" duration="798000" />
+      <workItem from="1543483608093" duration="566000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64654000" />
+    <option name="totallyTimeSpent" value="65245000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="427" y="90" width="1361" height="796" extended-state="0" />
+    <frame x="124" y="82" width="927" height="729" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1724907" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2546652" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -321,7 +332,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="532">
           <caret line="44" column="7" lean-forward="true" selection-start-line="44" selection-start-column="7" selection-end-line="44" selection-end-column="7" />
-          <folding />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+            <element signature="n#!!doc;n#checkUpdateLoop#0;n#HotUpdateCus#0" expanded="false" />
+            <element signature="n#!!block;n#checkUpdateLoop#0;n#HotUpdateCus#0" expanded="false" />
+            <element signature="e#1605#6540#0" expanded="false" />
+            <element signature="n#!!block;n#checkHasUpate#0;n#HotUpdateCus#0" expanded="false" />
+            <element signature="e#7262#7736#0" expanded="false" />
+            <element signature="n#!!block;n#isHasUpdate#0;n#HotUpdateCus#0" expanded="false" />
+            <element signature="e#8963#14072#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -357,7 +377,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6118">
           <caret line="338" column="36" lean-forward="true" selection-start-line="338" selection-start-column="36" selection-end-line="338" selection-end-column="36" />
-          <folding />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+            <element signature="n#!!doc;n#checkUpdateLoop#0;n#HotUpdateCus#0" expanded="false" />
+            <element signature="n#!!block;n#checkUpdateLoop#0;n#HotUpdateCus#0" expanded="false" />
+            <element signature="e#1605#6540#0" expanded="false" />
+            <element signature="n#!!block;n#checkHasUpate#0;n#HotUpdateCus#0" expanded="false" />
+            <element signature="e#7262#7736#0" expanded="false" />
+            <element signature="n#!!block;n#isHasUpdate#0;n#HotUpdateCus#0" expanded="false" />
+            <element signature="e#8963#14072#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -588,7 +617,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="424">
           <caret line="338" column="36" lean-forward="true" selection-start-line="338" selection-start-column="36" selection-end-line="338" selection-end-column="36" />
-          <folding />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+            <element signature="n#!!doc;n#checkUpdateLoop#0;n#HotUpdateCus#0" expanded="false" />
+            <element signature="n#!!block;n#checkUpdateLoop#0;n#HotUpdateCus#0" expanded="false" />
+            <element signature="e#1605#6540#0" expanded="false" />
+            <element signature="n#!!block;n#checkHasUpate#0;n#HotUpdateCus#0" expanded="false" />
+            <element signature="e#7262#7736#0" expanded="false" />
+            <element signature="n#!!block;n#isHasUpdate#0;n#HotUpdateCus#0" expanded="false" />
+            <element signature="e#8963#14072#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -631,22 +669,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="38">
           <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="38">
-            <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-            <folding />
-          </first_editor>
-          <second_editor>
-            <markdownNavigatorState />
-          </second_editor>
         </state>
       </provider>
     </entry>
@@ -660,8 +685,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="519" column="0" lean-forward="true" selection-start-line="519" selection-start-column="0" selection-end-line="519" selection-end-column="0" />
+        <state relative-caret-position="419">
+          <caret line="519" column="0" lean-forward="false" selection-start-line="519" selection-start-column="0" selection-end-line="519" selection-end-column="0" />
           <folding>
             <element signature="e#0#77#0" expanded="true" />
             <element signature="n#HotUpdate#0" expanded="false" />
@@ -669,11 +694,33 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="-646">
+            <caret line="2" column="17" lean-forward="false" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+            <folding />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/example/HotUpdateTest.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="19" column="75" lean-forward="false" selection-start-line="19" selection-start-column="75" selection-end-line="19" selection-end-column="75" />
-          <folding />
+        <state relative-caret-position="-95">
+          <caret line="16" column="49" lean-forward="false" selection-start-line="16" selection-start-column="49" selection-end-line="16" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+            <element signature="n#!!doc;n#checkUpdateLoop#0;n#HotUpdateCus#0" expanded="false" />
+            <element signature="n#!!block;n#checkUpdateLoop#0;n#HotUpdateCus#0" expanded="false" />
+            <element signature="e#1605#6540#0" expanded="false" />
+            <element signature="n#!!block;n#checkHasUpate#0;n#HotUpdateCus#0" expanded="false" />
+            <element signature="e#7262#7736#0" expanded="false" />
+            <element signature="n#!!block;n#isHasUpdate#0;n#HotUpdateCus#0" expanded="false" />
+            <element signature="e#8963#14072#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
