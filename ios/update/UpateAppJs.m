@@ -18,12 +18,15 @@ static NSString *const paramVersionCode = @"bundleVersion";
 static NSString *const paramVersionCodeLast = @"bundleVersionLast";
 static NSString *const paramBundleJsPath = @"BundleJsPath";
 static NSString *const paramBundleJsPathLast = @"BundleJsPathLast";
-static NSString *mainBundleFilePath;//js代码路径
-static NSString *currentVersion;//当前动态版本号，即当前js版本号
-static NSString *lastVersion;//上一个动态版本号，即上一个js版本号
-static NSString *bundleJsPathCur;//当前运行js版本的相对路径
-static NSString *bundleJsPathLast;//上一个前运行js版本的相对路径
-static NSUserDefaults *userPrefer;
+static NSString *const paramBundleJsRefresh = @"isRefresh";//是否更新key
+static NSString *const paramUpdateInfo = @"updateInfo";
+
+//static NSString *mainBundleFilePath;//js代码路径
+//static NSString *currentVersion;//当前动态版本号，即当前js版本号
+//static NSString *lastVersion;//上一个动态版本号，即上一个js版本号
+//static NSString *bundleJsPathCur;//当前运行js版本的相对路径
+//static NSString *bundleJsPathLast;//上一个前运行js版本的相对路径
+//static NSUserDefaults *userPrefer;
 
 /**
  热更新模块，若有bug导致应用直接崩溃，则js代码版本自动回滚到前一个版本
@@ -40,49 +43,84 @@ static NSUserDefaults *userPrefer;
 RCT_EXPORT_MODULE()
 
 - (id)init{
-  packageVersion = [[self class] packageVersion];
-  userPrefer = [NSUserDefaults standardUserDefaults];
- 
+
   return self;
 }
 
 //获取js代码打包压缩的bundle文件的url
 + (NSURL*)bundleURL{
   NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-  currentVersion = [userDefaults objectForKey:paramVersionCode];
-  lastVersion = [userDefaults objectForKey:paramVersionCodeLast];
-  NSString *bundleJsPath = [userDefaults objectForKey:paramBundleJsPath];//当前运行js的相对路径
-  bundleJsPathLast = [userDefaults objectForKey:paramBundleJsPathLast];//上一个前运行js版本的相对路径
+  NSDictionary *updateInfo  = [userDefaults dictionaryForKey:paramUpdateInfo];
   
   NSURL *bundle = nil;
   
-  if(![bundleJsPath isEqualToString:bundleJsPathLast]){
-    if(bundleJsPath){
-      bundleJsPathCur = bundleJsPath;
-      [userDefaults setObject:nil forKey:paramBundleJsPath];
-      [userDefaults setObject:nil forKey:paramVersionCode];
-      [userDefaults synchronize];
-    }
-    else if(bundleJsPathLast)
-    {
-      bundleJsPathCur = bundleJsPathLast;
-      bundleJsPath = bundleJsPathLast;
-      currentVersion = lastVersion;
-    }
-  }
-  
-  if(bundleJsPath){
-    bundleJsPath = [[self DocumentFilePath] stringByAppendingString:bundleJsPath];
+  if(updateInfo){
+    BOOL isRefresh = [updateInfo[paramBundleJsRefresh] boolValue];
+    NSString *currentVersion = [updateInfo objectForKey:paramVersionCode];
+    NSString *lastVersion = [updateInfo objectForKey:paramVersionCodeLast];
+    NSString *bundleJsPath = [updateInfo objectForKey:paramBundleJsPath];//当前运行js的相对路径
+    NSString *bundleJsPathLast = [updateInfo objectForKey:paramBundleJsPathLast];//上一个前运行js版本的相对路径
     
-    NSFileManager *fileMgr = [NSFileManager defaultManager];
-    if([fileMgr fileExistsAtPath:bundleJsPath]){
-      bundleJsPath = [bundleJsPath stringByAppendingString:@"/main.jsbundle"];
+    if(isRefresh == YES){
+      [userDefaults setObject:@{
+                                paramBundleJsRefresh:@(NO),
+                                paramVersionCode:currentVersion,
+                                paramVersionCodeLast:lastVersion,
+                                paramBundleJsPath:bundleJsPath,
+                                paramBundleJsPathLast:bundleJsPathLast
+                                }
+                       forKey:paramUpdateInfo];
+      [userDefaults synchronize];
       
-      bundle = [NSURL fileURLWithPath:bundleJsPath];
+      if(bundleJsPath){
+        NSString *bundleJs = [[self DocumentFilePath] stringByAppendingString:bundleJsPath];
+        bundleJs = [bundleJs stringByAppendingString:@"/main.jsbundle"];
+        
+        NSFileManager *fileMgr = [NSFileManager defaultManager];
+        if([fileMgr fileExistsAtPath:bundleJs]){
+          bundle = [NSURL fileURLWithPath:bundleJs];
+        }
+        else
+        {
+          bundle = [self bundleURL];
+        }
+      }
+      else
+      {
+        bundle = [self bundleURL];
+      }
+      
     }
     else
     {
-      bundle = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+      [userDefaults setObject:@{
+                                paramBundleJsRefresh:@(NO),
+                                paramVersionCode:lastVersion,
+                                paramVersionCodeLast:lastVersion,
+                                paramBundleJsPath:bundleJsPath,
+                                paramBundleJsPathLast:bundleJsPath
+                                }
+                       forKey:paramUpdateInfo];
+      [userDefaults synchronize];
+      
+      if(bundleJsPathLast)
+      {
+        NSString *bundleJs = [[self DocumentFilePath] stringByAppendingString:bundleJsPathLast];
+        bundleJs = [bundleJs stringByAppendingString:@"/main.jsbundle"];
+        
+        NSFileManager *fileMgr = [NSFileManager defaultManager];
+        if([fileMgr fileExistsAtPath:bundleJs]){
+          bundle = [NSURL fileURLWithPath:bundleJs];
+        }
+        else
+        {
+          bundle = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+        }
+      }
+      else
+      {
+        bundle = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
+      }
     }
   }
   else
@@ -90,10 +128,8 @@ RCT_EXPORT_MODULE()
     bundle = [[NSBundle mainBundle] URLForResource:@"main" withExtension:@"jsbundle"];
   }
   
-  mainBundleFilePath = bundleJsPath;
-  
   NSLog(@"=========use asserts:%@", bundle);
-
+  
   return bundle;
 }
 
@@ -104,7 +140,8 @@ RCT_EXPORT_METHOD(setPreferData:(NSString *)key
                   value:(NSString *)value
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject){
-   [userPrefer setObject:value forKey:key];
+  NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+  [userDefaults setObject:value forKey:key];
   resolve(nil);
 }
 
@@ -114,7 +151,8 @@ RCT_EXPORT_METHOD(setPreferData:(NSString *)key
 RCT_EXPORT_METHOD(getPreferData:(NSString *)key
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject){
-  resolve([userPrefer objectForKey:key]);
+  NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+  resolve([userDefaults objectForKey:key]);
 }
 
 /**
@@ -128,15 +166,25 @@ RCT_EXPORT_METHOD(setVersion:(NSString *)versionCode
                   rejecter:(RCTPromiseRejectBlock)reject){
   if(versionCode && bundleJsPath){
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    [userDefaults setObject:versionCode forKey:paramVersionCode];
-    [userDefaults setObject:bundleJsPath forKey:paramBundleJsPath];
-     resolve(nil);
+    NSDictionary *updateInfo  = [userDefaults dictionaryForKey:paramUpdateInfo];
+    
+    NSMutableDictionary *ret = [NSMutableDictionary new];
+    ret[paramBundleJsRefresh] = @(YES);
+    ret[paramVersionCode] = versionCode;
+    ret[paramVersionCodeLast] = updateInfo[paramVersionCodeLast];
+    ret[paramBundleJsPath] = bundleJsPath;
+    ret[paramBundleJsPathLast] = updateInfo[paramBundleJsPathLast];
+    
+    [userDefaults setObject:ret forKey:paramUpdateInfo];
+    [userDefaults synchronize];
+    
+    resolve(ret);
   }
   else
   {
     reject(nil,nil,nil);
   }
- 
+  
 }
 
 /**
@@ -154,46 +202,51 @@ RCT_EXPORT_METHOD(reload){
  **/
 - (NSDictionary *)constantsToExport
 {
-//  [[self class] bundleURL];
+  //  [[self class] bundleURL];
+  NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+  NSDictionary *updateInfo  = [userDefaults dictionaryForKey:paramUpdateInfo];
+  
+  NSString *currentVersion = [updateInfo objectForKey:paramVersionCode];
+  NSString *lastVersion = [updateInfo objectForKey:paramVersionCodeLast];
+  NSString *bundleJsPath = [updateInfo objectForKey:paramBundleJsPath];//当前运行js的相对路径
+  NSString *bundleJsPathLast = [updateInfo objectForKey:paramBundleJsPathLast];//上一个前运行js版本的相对路径
   
   NSMutableDictionary *ret = [NSMutableDictionary new];
   ret[@"currentVersion"] = currentVersion;
-  ret[@"packageVersion"] = packageVersion;
-  ret[@"bundleJsPathCur"] = bundleJsPathCur;
+  ret[@"lastVersion"] = lastVersion;
+  ret[@"packageVersion"] = [[self class] packageVersion];
+  ret[@"bundleJsPathCur"] = bundleJsPath;
   ret[@"bundleJsPathLast"] = bundleJsPathLast;
-  ret[@"mainBundleFilePath"] = mainBundleFilePath;
+  
   
   return ret;
 }
 
 /**
- 获取即时版本信息
- **/
-RCT_EXPORT_METHOD(getAppInfo:(RCTResponseSenderBlock)callback)
-  {
-//    [[self class] bundleURL];
-    
-    NSMutableDictionary *ret = [NSMutableDictionary new];
-    ret[@"currentVersion"] = currentVersion;
-    ret[@"packageVersion"] = packageVersion;
-    ret[@"bundleJsPathCur"] = bundleJsPathCur;
-    ret[@"bundleJsPathLast"] = bundleJsPathLast;
-    ret[@"mainBundleFilePath"] = mainBundleFilePath;
-    
-    callback(@[ret]);
-    
-  }
-
-/**
  标记更新成功，若js无bug则标记成功，若有bug则回滚到前一个js版本
  **/
-RCT_EXPORT_METHOD(markSuccess)
+RCT_EXPORT_METHOD(markSuccess:(RCTResponseSenderBlock)callback)
 {
-  [userPrefer setObject:bundleJsPathCur forKey:paramBundleJsPathLast];
-  [userPrefer setObject:bundleJsPathCur forKey:paramBundleJsPath];
-  [userPrefer setObject:currentVersion forKey:paramVersionCode];
-  [userPrefer setObject:currentVersion forKey:paramVersionCodeLast];
-  [userPrefer synchronize];
+  NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+  NSDictionary *updateInfo  = [userDefaults dictionaryForKey:paramUpdateInfo];
+
+  NSString *currentVersion = [updateInfo objectForKey:paramVersionCode];
+  NSString *lastVersion = [updateInfo objectForKey:paramVersionCodeLast];
+  NSString *bundleJsPath = [updateInfo objectForKey:paramBundleJsPath];//当前运行js的相对路径
+  NSString *bundleJsPathLast = [updateInfo objectForKey:paramBundleJsPathLast];//上一个前运行js版本的相对路径
+  
+  NSMutableDictionary *ret = [NSMutableDictionary new];
+  ret[paramBundleJsRefresh] = @(NO);
+  ret[paramVersionCode] = currentVersion;
+  ret[paramVersionCodeLast] = currentVersion;
+  ret[paramBundleJsPath] = bundleJsPath;
+  ret[paramBundleJsPathLast] = bundleJsPath;
+  
+  [userDefaults setObject:ret forKey:paramUpdateInfo];
+  [userDefaults synchronize];
+  
+  NSDictionary *ret1 = [userDefaults dictionaryForKey:paramUpdateInfo];
+  callback(@[ret1]);
 }
 
 /**

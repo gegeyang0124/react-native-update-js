@@ -78,6 +78,7 @@ export class HotUpdate{
                         if(info.packageVersion){
                             if(info.packageVersion === packageVersion){
                                 if(info.publishJS && info.publishJS.length > 0){
+                                    // info.publishJS[0].version = "2.0.29";
                                     HotUpdate.updateInfo = {
                                         expired:false,//{expired: false}：该应用包(原生部分)已过期，需要前往应用市场下载新的版本；反之false
                                         packageVersion:info.packageVersion,
@@ -393,41 +394,60 @@ export class HotUpdate{
      * 删除目录下得一级目录和文件
      * **/
     static delDir(){
-        this.getAppInfo()
-            .then((appInfo)=>{
-                if(RNFS.readDir){
-                    let dir = this.sourceDir + this.WWWROOT;
-                    RNFS.exists(dir)
-                        .then((exist) =>{
-                            if(exist)
-                            {
-                                RNFS.readDir(dir)
-                                    .then((files)=>{
-                                        // console.info("files:",files)
+       this.setMarkSuccess().then(()=>{
+           if(RNFS.readDir){
+               let dir = this.sourceDir + this.WWWROOT;
+               RNFS.exists(dir)
+                   .then((exist) =>{
+                       if(exist)
+                       {
+                           RNFS.readDir(dir)
+                               .then((files)=>{
+                                   console.info("files:",files);
 
-                                        let path = null;
-                                        if(mainBundleFilePath)
-                                        {
-                                            path = mainBundleFilePath.substring(0,mainBundleFilePath.lastIndexOf("/"));
-                                        }
-                                        // console.info("path:",path);
-                                        // console.info("path:",mainBundleFilePath);
+                                   let path = null;
+                                   let pathLast = null;
+                                   if(bundleJsPathCur)
+                                   {
+                                      path = this.sourceDir + bundleJsPathCur;
 
-                                        files.forEach((v,i,a)=>{
-                                            if(v.path != path
-                                                && v.path.indexOf(bundleJsPathLast) == -1){
-                                                this.deleteDirOrFile(v.path);
-                                            }
-                                        });
-                                    });
-                            }
+                                   }
+                                   else if(mainBundleFilePath){
+                                       path = mainBundleFilePath.substring(0,mainBundleFilePath.lastIndexOf("/"));
+                                   }
 
-                            markSuccess&&markSuccess();
-                        });
+                                   if(bundleJsPathLast){
+                                       pathLast = this.sourceDir + bundleJsPathLast;
+                                   }
 
-                }
-            });
+                                   // let l = [];
 
+                                   files.forEach((v,i,a)=>{
+                                       if(v.path != path
+                                           && v.path != pathLast){
+                                           this.deleteDirOrFile(v.path);
+                                       }
+                                       /*else
+                                       {
+                                           l.push(v.path);
+                                       }
+
+                                       if(i == (files.length) - 1){
+                                           Loadding.show(false,JSON.stringify(l) + "  | "
+                                               + l.length
+                                               + " |  " + bundleJsPathLast);
+                                           setTimeout(()=>{Loadding.hide();},3000);
+                                       }*/
+                                   });
+
+                               });
+                       }
+
+
+                   });
+
+           }
+       });
     }
 
     /**
@@ -458,7 +478,7 @@ export class HotUpdate{
      *  }
      * **/
     static  getAppInfo(){
-        return new Promise(resolve => {
+       /* return new Promise(resolve => {
             // console.info("mainBundleFilePath:",mainBundleFilePath);
             if(HotUpdateJs.getAppInfo){
                 HotUpdateJs.getAppInfo((info)=>{
@@ -466,6 +486,32 @@ export class HotUpdate{
                     resolve(info);
                 });
             }
+        });*/
+
+    }
+
+    /**
+     *  设置更新标志
+     *  回传数据 {
+           currentVersion，
+           packageVersion，
+           bundleJsPathCur，
+           bundleJsPathLast，
+           mainBundleFilePath，
+     *  }
+     * **/
+    static setMarkSuccess(){
+        return new Promise(resolve => {
+            if(markSuccess){
+                markSuccess((info)=>{
+                    resolve(info);
+                });
+            }
+            else
+            {
+                resolve({});
+            }
+
         });
 
     }

@@ -35,7 +35,7 @@ HotUpdate.tag = "";//热更新的标志 与后台配置一致 必须设置 默�
 HotUpdate.checkUpdate();//检查更新
 HotUpdate.downloadUpdate();//下载更新
 HotUpdate.doUpdate();//更新重载应用
-HotUpdate.getAppInfo();//获取更新即时版本信息
+HotUpdate.setMarkSuccess();//标记更新成功，若js无bug则标记成功，若有bug则回滚到前一个js版本
 ```
 
 ##### HotUpdate 的后台配置，（配置后台文件或接口，自由选择）例如下列示例(有一个我测试放在后台的json文件，在[lib文件夹](https://github.com/gegeyang0124/react-native-update-js/blob/master/lib/update.json)下，可参考)
