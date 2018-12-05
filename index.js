@@ -6,8 +6,13 @@ import {
 
 import { zip, unzip, unzipAssets, subscribe } from 'react-native-zip-archive';
 import RNFS from "react-native-fs";
+import Loadding from "react-native-toast-loadding";
 
-const HotUpdateJs = NativeModules.RNUpdateAppJs ?  NativeModules.RNUpdateAppJs :{};
+const HotUpdateJs = NativeModules.RNUpdateAppJs
+    ?  NativeModules.RNUpdateAppJs
+    :  NativeModules.UpateAppJs
+        ? NativeModules.UpateAppJs
+        : {};
 
 export const packageVersion = HotUpdateJs.packageVersion;//app的静态版本(硬版本)号，即编译时设置的版本号，此发生变化就会去下载新的静态版本(硬版本)
 export var currentVersion = HotUpdateJs.currentVersion;//动态版本号，即当前运行的js程序的js版本号
@@ -15,7 +20,7 @@ export var mainBundleFilePath = HotUpdateJs.mainBundleFilePath;//js代码路径 
 export const markSuccess = HotUpdateJs.markSuccess;// 标记更新成功，若js无bug则标记成功，若有bug则回滚到前一个js版本
 export const bundleJsPathCur = HotUpdateJs.bundleJsPathCur;// 当前运行js版本的相对路径
 export const bundleJsPathLast = HotUpdateJs.bundleJsPathLast;// 上一个前运行js版本的相对路径
-export const Loadding = require("./lib/LoaddingIndicator").default;
+// export const Loadding = require("./lib/LoaddingIndicator").default;
 
 /**
  * 热更新，提供热更新各种方法,自己配置服务器
@@ -79,7 +84,7 @@ export class HotUpdate{
                         if(info.packageVersion){
                             if(info.packageVersion === packageVersion){
                                 if(info.publishJS && info.publishJS.length > 0){
-                                    // info.publishJS[0].version = "2.0.183";
+                                    // info.publishJS[0].version = "2.0.188";
                                     HotUpdate.updateInfo = {
                                         expired:false,//{expired: false}：该应用包(原生部分)已过期，需要前往应用市场下载新的版本；反之false
                                         packageVersion:info.packageVersion,
@@ -163,12 +168,21 @@ export class HotUpdate{
 
                     this.setVersion(info.version,www)
                         .then(()=>{
-                            setTimeout(()=>{
+                            if(__DEV__){
+                                setTimeout(()=>{
+                                    Loadding.hide();
+                                    if(isReload){
+                                        this.reload();
+                                    }
+                                },1500);
+                            }
+                            else
+                            {
                                 Loadding.hide();
                                 if(isReload){
                                     this.reload();
                                 }
-                            },1500);
+                            }
 
                         })
                         .catch(()=>{
