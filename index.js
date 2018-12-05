@@ -7,7 +7,7 @@ import {
 import { zip, unzip, unzipAssets, subscribe } from 'react-native-zip-archive';
 import RNFS from "react-native-fs";
 
-const HotUpdateJs = NativeModules.UpateAppJs ?  NativeModules.UpateAppJs :{};
+const HotUpdateJs = NativeModules.RNUpdateAppJs ?  NativeModules.RNUpdateAppJs :{};
 
 export const packageVersion = HotUpdateJs.packageVersion;//app的静态版本(硬版本)号，即编译时设置的版本号，此发生变化就会去下载新的静态版本(硬版本)
 export var currentVersion = HotUpdateJs.currentVersion;//动态版本号，即当前运行的js程序的js版本号
@@ -20,6 +20,7 @@ export const Loadding = require("./lib/LoaddingIndicator").default;
 /**
  * 热更新，提供热更新各种方法,自己配置服务器
  * 若有bug导致应用直接崩溃，则js代码版本自动回滚到前一个版本
+ * 下次
  * **/
 export class HotUpdate{
 
@@ -78,7 +79,7 @@ export class HotUpdate{
                         if(info.packageVersion){
                             if(info.packageVersion === packageVersion){
                                 if(info.publishJS && info.publishJS.length > 0){
-                                    // info.publishJS[0].version = "2.0.29";
+                                    // info.publishJS[0].version = "2.0.183";
                                     HotUpdate.updateInfo = {
                                         expired:false,//{expired: false}：该应用包(原生部分)已过期，需要前往应用市场下载新的版本；反之false
                                         packageVersion:info.packageVersion,
@@ -162,10 +163,13 @@ export class HotUpdate{
 
                     this.setVersion(info.version,www)
                         .then(()=>{
-                            Loadding.hide();
-                            if(isReload){
-                                this.reload();
-                            }
+                            setTimeout(()=>{
+                                Loadding.hide();
+                                if(isReload){
+                                    this.reload();
+                                }
+                            },1500);
+
                         })
                         .catch(()=>{
                             Loadding.hide();
@@ -394,60 +398,60 @@ export class HotUpdate{
      * 删除目录下得一级目录和文件
      * **/
     static delDir(){
-       this.setMarkSuccess().then(()=>{
-           if(RNFS.readDir){
-               let dir = this.sourceDir + this.WWWROOT;
-               RNFS.exists(dir)
-                   .then((exist) =>{
-                       if(exist)
-                       {
-                           RNFS.readDir(dir)
-                               .then((files)=>{
-                                   console.info("files:",files);
+        this.setMarkSuccess().then(()=>{
+            if(RNFS.readDir){
+                let dir = this.sourceDir + this.WWWROOT;
+                RNFS.exists(dir)
+                    .then((exist) =>{
+                        if(exist)
+                        {
+                            RNFS.readDir(dir)
+                                .then((files)=>{
+                                    console.info("files:",files);
 
-                                   let path = null;
-                                   let pathLast = null;
-                                   if(bundleJsPathCur)
-                                   {
-                                      path = this.sourceDir + bundleJsPathCur;
+                                    let path = null;
+                                    let pathLast = null;
+                                    if(bundleJsPathCur)
+                                    {
+                                        path = this.sourceDir + bundleJsPathCur;
 
-                                   }
-                                   else if(mainBundleFilePath){
-                                       path = mainBundleFilePath.substring(0,mainBundleFilePath.lastIndexOf("/"));
-                                   }
+                                    }
+                                    else if(mainBundleFilePath){
+                                        path = mainBundleFilePath.substring(0,mainBundleFilePath.lastIndexOf("/"));
+                                    }
 
-                                   if(bundleJsPathLast){
-                                       pathLast = this.sourceDir + bundleJsPathLast;
-                                   }
+                                    if(bundleJsPathLast){
+                                        pathLast = this.sourceDir + bundleJsPathLast;
+                                    }
 
-                                   // let l = [];
+                                    // let l = [];
 
-                                   files.forEach((v,i,a)=>{
-                                       if(v.path != path
-                                           && v.path != pathLast){
-                                           this.deleteDirOrFile(v.path);
-                                       }
-                                       /*else
-                                       {
-                                           l.push(v.path);
-                                       }
+                                    files.forEach((v,i,a)=>{
+                                        if(v.path != path
+                                            && v.path != pathLast){
+                                            this.deleteDirOrFile(v.path);
+                                        }
+                                        /*else
+                                        {
+                                            l.push(v.path);
+                                        }
 
-                                       if(i == (files.length) - 1){
-                                           Loadding.show(false,JSON.stringify(l) + "  | "
-                                               + l.length
-                                               + " |  " + bundleJsPathLast);
-                                           setTimeout(()=>{Loadding.hide();},3000);
-                                       }*/
-                                   });
+                                        if(i == (files.length) - 1){
+                                            Loadding.show(false,JSON.stringify(l) + "  | "
+                                                + l.length
+                                                + " |  " + bundleJsPathLast);
+                                            setTimeout(()=>{Loadding.hide();},3000);
+                                        }*/
+                                    });
 
-                               });
-                       }
+                                });
+                        }
 
 
-                   });
+                    });
 
-           }
-       });
+            }
+        });
     }
 
     /**
@@ -478,15 +482,15 @@ export class HotUpdate{
      *  }
      * **/
     static  getAppInfo(){
-       /* return new Promise(resolve => {
-            // console.info("mainBundleFilePath:",mainBundleFilePath);
-            if(HotUpdateJs.getAppInfo){
-                HotUpdateJs.getAppInfo((info)=>{
-                    // console.info("app info",info)
-                    resolve(info);
-                });
-            }
-        });*/
+        /* return new Promise(resolve => {
+             // console.info("mainBundleFilePath:",mainBundleFilePath);
+             if(HotUpdateJs.getAppInfo){
+                 HotUpdateJs.getAppInfo((info)=>{
+                     // console.info("app info",info)
+                     resolve(info);
+                 });
+             }
+         });*/
 
     }
 
@@ -503,7 +507,7 @@ export class HotUpdate{
     static setMarkSuccess(){
         return new Promise(resolve => {
             if(markSuccess){
-                markSuccess((info)=>{
+                markSuccess().then(info=>{
                     resolve(info);
                 });
             }
