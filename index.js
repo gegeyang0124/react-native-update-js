@@ -284,8 +284,20 @@ export class HotUpdate{
                                         console.info("response:",retJson);
                                         console.log("-----------------------------------------downloadFile " + fileAddress + " success end-------------------------------------");
 
-                                        retJson["filePath"] = downloadDest;
-                                        resolve&&resolve(retJson);
+                                        RNFS.stopDownload(retJson.jobId);
+                                        if(retJson.statusCode == 200){
+                                            retJson["filePath"] = downloadDest;
+                                            resolve&&resolve(retJson);
+                                        }
+                                        else
+                                        {
+                                            Loadding.show(false,"升级包不存在");
+                                            setTimeout(()=>{
+                                                Loadding.hide();
+                                            },2000);
+                                        }
+
+
 
                                     }).catch(err => {
                                         //console.log('err', err);
