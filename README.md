@@ -88,7 +88,8 @@ Android 同理
 <BR/>
 也可以在命令执行后看命令输出目录：<BR/>
 
-![示例命令图](https://github.com/gegeyang0124/react-native-update-js/blob/master/res/cmd.png)
+<!--![示例命令图](https://github.com/gegeyang0124/react-native-update-js/blob/master/res/cmd.png)-->
+![示例命令图](https://qdcu01.baidupcs.com/file/4b9d452d2c55ea66676034b85c7ae564?bkt=p3-14004b9d452d2c55ea66676034b85c7ae5643c29b532000000004c55&fid=2334753321-250528-384479036646143&time=1544060305&sign=FDTAXGERLQBHSKfW-DCb740ccc5511e5e8fedcff06b081203-daKDIWMKDM8kFKdQi5T2KNT6mh0%3D&to=65&size=19541&sta_dx=19541&sta_cs=3&sta_ft=png&sta_ct=0&sta_mt=0&fm2=MH%2CQingdao%2CAnywhere%2C%2Cguangdong%2Cct&ctime=1544059721&mtime=1544059721&resv0=cdnback&resv1=0&vuk=2334753321&iv=0&htype=&newver=1&newfm=1&secfm=1&flow_ver=3&pkey=14004b9d452d2c55ea66676034b85c7ae5643c29b532000000004c55&sl=76480590&expires=8h&rt=sh&r=803280873&mlogid=7871683046613381432&vbdid=193055067&fin=cmd.png&fn=cmd.png&rtype=1&dp-logid=7871683046613381432&dp-callid=0.1.1&hps=1&tsl=80&csl=80&csign=eCJFpT3L5GGjlbOl9mCqQTqzrkI%3D&so=0&ut=6&uter=4&serv=0&uc=4192912830&ti=26fa64dbec2882243ebd9c8492dfb7f4de326a86c119b5f9305a5e1275657320&by=themis)
 
 ##### [示列代码](https://github.com/gegeyang0124/react-native-update-js/blob/master/example/HotUpdateTest.js)
 
