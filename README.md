@@ -88,8 +88,7 @@ Android 同理
 <BR/>
 也可以在命令执行后看命令输出目录：<BR/>
 
-<!--![示例命令图](https://github.com/gegeyang0124/react-native-update-js/blob/master/res/cmd.png)-->
-![示例命令图](https://thumbnail0.baidupcs.com/thumbnail/4b9d452d2c55ea66676034b85c7ae564?fid=2334753321-250528-543749066846106&time=1544058000&rt=sh&sign=FDTAER-DCb740ccc5511e5e8fedcff06b081203-qyKz%2FCvcx8An6HMJ%2BFjY4P8B7ok%3D&expires=8h&chkv=0&chkbd=0&chkpc=&dp-logid=7871748427594656670&dp-callid=0&size=c710_u400&quality=100&vuk=-&ft=video)
+![示例命令图](https://github.com/gegeyang0124/react-native-update-js/blob/master/showImg/cmd.png)
 
 ##### [示列代码](https://github.com/gegeyang0124/react-native-update-js/blob/master/example/HotUpdateTest.js)
 
