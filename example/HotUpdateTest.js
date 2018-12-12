@@ -4,19 +4,21 @@ import {
 
 import {Tools} from "./Tools";
 import {Alert} from "./Alert";
+import RNFS from "react-native-fs";
 
 import {
     packageVersion,
     currentVersion,
     mainBundleFilePath,
     HotUpdate,
+    build,
 } from "react-native-update-js";
 import DeviceInfo from "react-native-device-info";
 import {LocalStorage} from "./LocalStorage";
 import {ProgressPerApi} from "./ProgressPerApi";
-const HUpdate = require("./HotUpdate").HotUpdate;
+
 HotUpdate.tag = "lx_yyt";//热更新的标志 与后台配置一致
-HotUpdate.host = "http://yyt.yyy.com:8081/XXX/XXX.json";//数据请求接口或配置文件（get请求）
+HotUpdate.host = "http://yyt.yyy.com:8081/XXX/XXX";//数据请求接口
 
 /**
  * 热更新，提供热更新各种方法,自己配置服务器
@@ -24,6 +26,10 @@ HotUpdate.host = "http://yyt.yyy.com:8081/XXX/XXX.json";//数据请求接口或�
 export class HotUpdateCus{
 
     static appID = null;//当前给app指定（分配）的id
+
+    static wwwDownloadDir = Platform.OS == "ios"
+        ? `${RNFS.DocumentDirectoryPath}/wwwRoot`
+        : `${RNFS.ExternalStorageDirectoryPath}/wwwRoot`;//下载目录
 
     static update = {
         code1:777,//777、立刻更新；888、立刻强制更新；999、立刻静默更新
@@ -41,14 +47,12 @@ export class HotUpdateCus{
      * 持续检测是否有更新
      * **/
     static checkUpdateLoop(){
-        if(!__DEV__){
-            setInterval(()=>{
-                if(HotUpdateCus.update.execute){
-                    // console.info("HotUpdate","HotUpdate");
-                    HotUpdateCus.checkUpdate();
-                }
-            },20000);
-        }
+        setInterval(()=>{
+            if(HotUpdateCus.update.execute){
+                // console.info("HotUpdate","HotUpdate");
+                HotUpdateCus.checkUpdate();
+            }
+        },10000);
     }
 
     /**
@@ -57,23 +61,12 @@ export class HotUpdateCus{
      * @Param cdUpdate func,//更新回调函数
      * **/
     static checkUpdate = (cd,cdUpdate) => {
-        HotUpdate.checkUpdate()
-            .then(info=>{
+        if(true){
 
-                let rnUpdate = false;
-                if(info.metaInfoPkg && info.metaInfoPkg.rnUpdate != undefined){
-                    if(typeof info.metaInfoPkg.rnUpdate == "boolean" && info.metaInfoPkg.rnUpdate)
-                    {
-                        rnUpdate = true;
-                    }
-                }
+            HotUpdate.checkUpdate()
+                .then(info=>{
 
-                if(rnUpdate){
-                    // HUpdate.checkUpdate();
-                }
-                else
-                {
-                    info.metaInfo = info.metaInfo ? info.metaInfo : {};
+                    // alert(JSON.stringify(info))
                     info.metaInfo.code = typeof info.metaInfo.code == 'number'
                         ? info.metaInfo.code
                         : HotUpdateCus.update.code1;
@@ -81,7 +74,7 @@ export class HotUpdateCus{
                         ? info.metaInfo.reboot
                         : HotUpdateCus.update.reboot1;
 
-                    if(!HotUpdateCus.update.version){
+                    if(build == null){
                         info.metaInfo.code = 888;
                         info.metaInfo.reboot = 666;
                     }
@@ -120,15 +113,32 @@ export class HotUpdateCus{
 
                     }
                     else if(info.update){
-
                         HotUpdateCus.checkHasUpate(info,(info)=>{
+
+                            info.metaInfo = info.metaInfo ? info.metaInfo : {};
+                            info.metaInfo.code = typeof info.metaInfo.code == 'number'
+                                ? info.metaInfo.code
+                                : HotUpdateCus.update.code1;
+                            info.metaInfo.reboot = typeof info.metaInfo.reboot == 'number'
+                                ? info.metaInfo.reboot
+                                : HotUpdateCus.update.reboot1;
+
+                            // info.metaInfo.code = 888;
+                            // info.metaInfo.reboot = 666;
+
+                            // if(!HotUpdateCus.update.version){
+                            if(build == null){
+                                info.metaInfo.code = 888;
+                                info.metaInfo.reboot = 666;
+                            }
+
                             HotUpdateCus.update.execute = false;
 
                             switch (info.metaInfo.code)
                             {
                                 case HotUpdateCus.update.code1: {
                                     cdUpdate&&cdUpdate();
-                                    if(HotUpdateCus.update.version !== info.version){
+                                    if(build < info.build){
                                         Alert.alert('检查到新的版本'+info.version+'\n是否下载?',
                                             info.description, [
                                                 {text: '是', onPress: ()=>{
@@ -160,9 +170,8 @@ export class HotUpdateCus{
                             }
                         },cd);
                     }
-                }
-
-            });
+                });
+        }
     };
 
     /**
@@ -173,18 +182,7 @@ export class HotUpdateCus{
      * @prama index int;info.publishJS的下标 可不传
      * **/
     static checkHasUpate(info,resolve:Function,reject:Function,index=0){
-        let curVer = HotUpdateCus.update.version
-            ? HotUpdateCus.update.version
-            : Tools.app_config.version;
-        if(curVer){
-            curVer = curVer.split(".").join("");
-            curVer = parseInt(curVer);
-        }
-        let nxtVer = info.version;
-        nxtVer = nxtVer.split(".").join("");
-        nxtVer = parseInt(nxtVer);
-
-        if(!HotUpdateCus.update.version || nxtVer > curVer){
+        if(info.build > build){
 
             if(this.isHasUpdate(info)){
                 resolve&&resolve(info);
@@ -257,13 +255,18 @@ export class HotUpdateCus{
      * @Param cd func,//回调函数
      * **/
     static doUpdate = (info,cd,reboot) =>{
+
         HotUpdate.downloadUpdate(info,(per)=>{
             ProgressPerApi.show(per);
         })
             .then(info => {
                 ProgressPerApi.hide();
                 LocalStorage.save(Tools.app_config.versionkey,
-                    info.version).then((dataSave)=>{
+                    {
+                        version:info.version,
+                        rnUpdate:false
+                    })
+                    .then((dataSave)=>{
 
                     switch (reboot)
                     {
@@ -286,13 +289,17 @@ export class HotUpdateCus{
                                     }},
                                 {text: '否', onPress:()=>{
                                         LocalStorage.save(Tools.app_config.versionkey,
-                                            Tools.app_config.version);
+                                            {
+                                                version:Tools.app_config.version,
+                                                rnUpdate:false
+                                            });
                                         HotUpdateCus.updateDelay();
                                         cd&&cd();
 
                                     }
                                 },
                                 {text: '下次启动时更新', onPress: ()=>{
+
                                         HotUpdate.setPreferData("rnUpdate","false");
                                         HotUpdateCus.update.version = info.version;
                                         HotUpdateCus.update.execute = true;
@@ -365,6 +372,8 @@ export class HotUpdateCus{
         });
     }
 
+
+
 }
 
-HotUpdateCus.checkUpdateLoop();
+// RNFS.mkdir(HotUpdateCus.wwwDownloadDir);

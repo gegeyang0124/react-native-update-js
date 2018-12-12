@@ -8,6 +8,8 @@
 
 #import "RNUpdateAppJs.h"
 
+#import <React/RCTConvert.h>
+
 //更新app的js代码及资源的类
 @interface RNUpdateAppJs() {
     NSString *packageVersion;//app的静态版本号，即硬版本号
@@ -18,6 +20,8 @@ static NSString *const paramVersionCode = @"bundleVersion";
 static NSString *const paramVersionCodeLast = @"bundleVersionLast";
 static NSString *const paramBundleJsPath = @"BundleJsPath";
 static NSString *const paramBundleJsPathLast = @"BundleJsPathLast";
+static NSString *const paramBundleJsBuild = @"BundleJsBuild";//构建值（数字），只可增大，不可重复，用于比对版本是否升级
+static NSString *const paramBundleJsBuildLast = @"BundleJsBuildLast";//构建值（数字），只可增大，不可重复，用于比对版本是否升级
 static NSString *const paramBundleJsRefresh = @"isRefresh";//是否更新key
 static NSString *const paramUpdateInfo = @"updateInfo";
 
@@ -60,6 +64,8 @@ RCT_EXPORT_MODULE()
         NSString *lastVersion = [updateInfo objectForKey:paramVersionCodeLast];
         NSString *bundleJsPath = [updateInfo objectForKey:paramBundleJsPath];//当前运行js的相对路径
         NSString *bundleJsPathLast = [updateInfo objectForKey:paramBundleJsPathLast];//上一个前运行js版本的相对路径
+        NSNumber *build = [updateInfo objectForKey:paramBundleJsBuild];// 构建值（数字），只可增大，不可重复，用于比对版本是否升级
+        NSNumber *buildLast = [updateInfo objectForKey:paramBundleJsBuildLast];// 构建值（数字），只可增大，不可重复，用于比对版本是否升级
         
         if(isRefresh == YES){
             
@@ -69,6 +75,8 @@ RCT_EXPORT_MODULE()
             ret[paramVersionCodeLast] = lastVersion;
             ret[paramBundleJsPath] = bundleJsPath;
             ret[paramBundleJsPathLast] = bundleJsPathLast;
+            ret[paramBundleJsBuild] = build;
+            ret[paramBundleJsBuildLast] = buildLast;
             [userDefaults setObject:ret forKey:paramUpdateInfo];
             [userDefaults synchronize];
             
@@ -98,6 +106,8 @@ RCT_EXPORT_MODULE()
             ret[paramVersionCodeLast] = lastVersion;
             ret[paramBundleJsPath] = bundleJsPathLast;
             ret[paramBundleJsPathLast] = bundleJsPathLast;
+            ret[paramBundleJsBuild] = buildLast;
+            ret[paramBundleJsBuildLast] = buildLast;
             [userDefaults setObject:ret forKey:paramUpdateInfo];
             [userDefaults synchronize];
             
@@ -165,28 +175,43 @@ RCT_EXPORT_METHOD(getPreferData:(NSString *)key
 
 /**
  设置js版本
- @param versionCode NSString,//js版本号
- @param bundleJsPath NSString,//js代码路径
+ @param options NSDictionary,//设置js版本相关数据
+ options : {
+ versionCode : '', //NSString,//js版本号
+ bundleJsPath : '', //NSString,//js代码路径
+ build : 122, //int,//构建值（数字），只可增大，不可重复，用于比对版本是否升级
+ }
  **/
-RCT_EXPORT_METHOD(setVersion:(NSString *)versionCode
-                  bundleJsPath:(NSString *)bundleJsPath
+RCT_EXPORT_METHOD(setVersion:(NSDictionary *)options
                   resolver:(RCTPromiseResolveBlock)resolve
                   rejecter:(RCTPromiseRejectBlock)reject){
-    if(versionCode && bundleJsPath){
+    NSString *versionCode = [RCTConvert NSString:options[@"versionCode"]];
+    NSString *bundleJsPath = [RCTConvert NSString:options[@"bundleJsPath"]];
+    NSNumber *build = [RCTConvert NSNumber:options[@"build"]];
+    
+//    resolve(@{
+//              @"versionCode":versionCode,
+//              @"bundleJsPath":bundleJsPath,
+//              @"build":build
+//              });
+
+    if(versionCode && bundleJsPath && build != nil){
         NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
         NSDictionary *updateInfo  = [userDefaults dictionaryForKey:paramUpdateInfo];
-        
+
         NSMutableDictionary *ret = [NSMutableDictionary new];
         ret[paramBundleJsRefresh] = @(YES);
         ret[paramVersionCode] = versionCode;
         ret[paramVersionCodeLast] = updateInfo[paramVersionCodeLast];
         ret[paramBundleJsPath] = bundleJsPath;
         ret[paramBundleJsPathLast] = updateInfo[paramBundleJsPathLast];
-        
+        ret[paramBundleJsBuild] = build;
+        ret[paramBundleJsBuildLast] = updateInfo[paramBundleJsBuildLast];
+
         [userDefaults setObject:ret forKey:paramUpdateInfo];
         [userDefaults synchronize];
-        
-        resolve(ret);
+
+        resolve([userDefaults dictionaryForKey:paramUpdateInfo]);
     }
     else
     {
@@ -218,6 +243,8 @@ RCT_EXPORT_METHOD(reload){
     NSString *lastVersion = [updateInfo objectForKey:paramVersionCodeLast];
     NSString *bundleJsPath = [updateInfo objectForKey:paramBundleJsPath];//当前运行js的相对路径
     NSString *bundleJsPathLast = [updateInfo objectForKey:paramBundleJsPathLast];//上一个前运行js版本的相对路径
+    NSNumber *build = [updateInfo objectForKey:paramBundleJsBuild];// 构建值（数字），只可增大，不可重复，用于比对版本是否升级
+    NSNumber *buildLast = [updateInfo objectForKey:paramBundleJsBuildLast];// 构建值（数字），只可增大，不可重复，用于比对版本是否升级
     
     NSMutableDictionary *ret = [NSMutableDictionary new];
     ret[@"currentVersion"] = currentVersion;
@@ -225,6 +252,8 @@ RCT_EXPORT_METHOD(reload){
     ret[@"packageVersion"] = [[self class] packageVersion];
     ret[@"bundleJsPathCur"] = bundleJsPath;
     ret[@"bundleJsPathLast"] = bundleJsPathLast;
+    ret[@"build"] = build;
+    ret[@"buildLast"] = buildLast;
     
     
     return ret;
@@ -240,9 +269,10 @@ RCT_EXPORT_METHOD(markSuccess:(RCTPromiseResolveBlock)resolve
     NSDictionary *updateInfo  = [userDefaults dictionaryForKey:paramUpdateInfo];
     
     NSString *currentVersion = [updateInfo objectForKey:paramVersionCode];
-//    NSString *lastVersion = [updateInfo objectForKey:paramVersionCodeLast];
+    //    NSString *lastVersion = [updateInfo objectForKey:paramVersionCodeLast];
     NSString *bundleJsPath = [updateInfo objectForKey:paramBundleJsPath];//当前运行js的相对路径
-//    NSString *bundleJsPathLast = [updateInfo objectForKey:paramBundleJsPathLast];//上一个前运行js版本的相对路径
+    //    NSString *bundleJsPathLast = [updateInfo objectForKey:paramBundleJsPathLast];//上一个前运行js版本的相对路径
+    NSNumber *build = [updateInfo objectForKey:paramBundleJsBuild];// 构建值（数字），只可增大，不可重复，用于比对版本是否升级
     
     NSMutableDictionary *ret = [NSMutableDictionary new];
     ret[paramBundleJsRefresh] = @(NO);
@@ -250,6 +280,8 @@ RCT_EXPORT_METHOD(markSuccess:(RCTPromiseResolveBlock)resolve
     ret[paramVersionCodeLast] = currentVersion;
     ret[paramBundleJsPath] = bundleJsPath;
     ret[paramBundleJsPathLast] = bundleJsPath;
+    ret[paramBundleJsBuild] = build;
+    ret[paramBundleJsBuildLast] = build;
     
     [userDefaults setObject:ret forKey:paramUpdateInfo];
     [userDefaults synchronize];

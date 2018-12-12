@@ -4,11 +4,12 @@
     "packageVersion":"2.0.7",
     "downloadUrl":"https://itunes.apple.com/cn/app/id1438062830?l=en&mt=8",
     "description":"yyy",
-    "metaInfoPkg":{},
+    "metaInfo":{},
     "publishJS":[
       {
         "description": "asdfsa",
         "version": "2.0.140",
+        "build": 12,
         "metaInfo":{},
         "updateUrl": "http://yyt.lexin580.com:8081/app_config/lx_yyt_app.zip"
       }

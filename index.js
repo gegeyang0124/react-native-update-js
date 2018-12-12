@@ -17,9 +17,11 @@ const HotUpdateJs = NativeModules.RNUpdateAppJs
 export const packageVersion = HotUpdateJs.packageVersion;//app的静态版本(硬版本)号，即编译时设置的版本号，此发生变化就会去下载新的静态版本(硬版本)
 export var currentVersion = HotUpdateJs.currentVersion;//动态版本号，即当前运行的js程序的js版本号
 export var mainBundleFilePath = HotUpdateJs.mainBundleFilePath;//js代码路径 指向main.jsbundle
-export const markSuccess = HotUpdateJs.markSuccess;// 标记更新成功，若js无bug则标记成功，若有bug则回滚到前一个js版本
+// export const markSuccess = HotUpdateJs.markSuccess;// 标记更新成功，若js无bug则标记成功，若有bug则回滚到前一个js版本
 export const bundleJsPathCur = HotUpdateJs.bundleJsPathCur;// 当前运行js版本的相对路径
 export const bundleJsPathLast = HotUpdateJs.bundleJsPathLast;// 上一个前运行js版本的相对路径
+export const build = HotUpdateJs.build;// 构建值（数字），只可增大，不可重复，用于比对版本是否升级
+export const buildLast = HotUpdateJs.buildLast;// 上一个版本的构建值（数字），只可增大，不可重复，用于比对版本是否升级
 // export const Loadding = require("./lib/LoaddingIndicator").default;
 
 /**
@@ -64,7 +66,8 @@ export class HotUpdate{
          metaInfo:{},//元信息可在里面自定义一些数据，js的版本，更新时回传
          publishJS:[]//发布的js所有版本,默认第一个是最新发布的的js版本
          description: "asdfsa",//js描述
-         version: "2.0.140",//js的版本号，只能增大
+         version: "2.0.140",//js的版本号
+         "build": 12,// 构建值（数字），只可增大，不可重复，用于比对版本是否升级
          updateUrl: "http://yyt.lexin580.com:8081/app_config/lx_yyt_app.zip" //js包
      });
      * **/
@@ -81,17 +84,27 @@ export class HotUpdate{
                         let key = plat + "-" + HotUpdate.tag + "-" + packageVersion;
                         info = info[key];
                         info = info ? info : {};
+
                         if(info.packageVersion){
+
                             if(info.packageVersion === packageVersion){
                                 if(info.publishJS && info.publishJS.length > 0){
-                                    // info.publishJS[0].version = "2.0.188";
+                                    let update = false;
+                                    if(build != null){
+                                        if(info.publishJS[0].build > build){
+                                            update = true;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        update = true;
+                                    }
+
                                     HotUpdate.updateInfo = {
                                         expired:false,//{expired: false}：该应用包(原生部分)已过期，需要前往应用市场下载新的版本；反之false
                                         packageVersion:info.packageVersion,
                                         metaInfoPkg:info.metaInfoPkg, //元信息可在里面自定义一些数据,app的静态版本(硬版本)，更新时回传
-                                        update:info.publishJS[0].version !== currentVersion
-                                            ? true
-                                            : false,//{update: true}：当前有新版本可以更新
+                                        update:update,//{update: true}：当前有新版本可以更新
                                         publishJS:info.publishJS//发布的js所有版本,默认第一个是最新发布的的js版本
                                     };
                                     HotUpdate.updateInfo = Object.assign({},HotUpdate.updateInfo, info.publishJS[0]);
@@ -166,7 +179,7 @@ export class HotUpdate{
                       );
                       www = www + srcDir;*/
 
-                    this.setVersion(info.version,www)
+                    this.setVersion(info.version,www,info.build)
                         .then(()=>{
                             if(__DEV__){
                                 setTimeout(()=>{
@@ -327,9 +340,19 @@ export class HotUpdate{
      * 设置js版本
      * @param versionCode NSString,//js版本号
      * @param bundleJsPath NSString,//js代码路径
+     * @param build int,//构建值
      **/
-    static setVersion(versionCode:string,bundleJsPath:string){
-        return HotUpdateJs.setVersion(versionCode,bundleJsPath);
+    static setVersion(versionCode:string,bundleJsPath:string,build:number){
+        console.info("option",{
+            versionCode,
+            bundleJsPath,
+            build
+        });
+        return HotUpdateJs.setVersion({
+            versionCode,
+            bundleJsPath,
+            build
+        });
     }
 
     /**
@@ -421,9 +444,10 @@ export class HotUpdate{
     }
 
     /**
+     * 标记更新成功
      * 删除目录下得一级目录和文件
      * **/
-    static delDir(){
+    static markSuccess(){
         this.setMarkSuccess().then(()=>{
             if(RNFS.readDir){
                 let dir = this.sourceDir + this.WWWROOT;
@@ -521,7 +545,7 @@ export class HotUpdate{
     }
 
     /**
-     *  设置更新标志
+     *  设置更新成功标志
      *  回传数据 {
            currentVersion，
            packageVersion，
@@ -532,10 +556,16 @@ export class HotUpdate{
      * **/
     static setMarkSuccess(){
         return new Promise(resolve => {
-            if(markSuccess){
-                markSuccess().then(info=>{
-                    resolve(info);
-                });
+            if(HotUpdateJs.markSuccess){
+                // Loadding.show(false,"MarkSuccess");
+                setTimeout(()=>{
+                    // Loadding.hide();
+                    HotUpdateJs.markSuccess()
+                        .then(info=>{
+                            resolve(info);
+                        });
+                },1000);
+
             }
             else
             {
@@ -561,6 +591,7 @@ export class HotUpdate{
                     {
                         "description": "asdfsa",
                         "version": "2.0.140",
+                        "build": 12,
                         "metaInfo":{},
                         "updateUrl": "http://yyt.lexin580.com:8081/app_config/lx_yyt_app.zip"
                     }
@@ -580,7 +611,8 @@ export class HotUpdate{
                 "publishJS":[//发布的js所有版本,默认第一个是最新发布的的js版本,可任选一个更新
                     {
                         "description": "asdfsa",//js描述
-                        "version": "2.0.140",//js的版本号，只能增大
+                        "version": "2.0.140",//js的版本号
+                        "build": 12,// 构建值（数字），只可增大，不可重复，用于比对版本是否升级
                         "metaInfo":{//元信息可在里面自定义一些数据，js的版本，更新时回传
                         },
                         "updateUrl": "http://yyt.lexin580.com:8081/app_config/lx_yyt_app.zip" //js包
@@ -589,9 +621,11 @@ export class HotUpdate{
 
             }
         }
+
     }
 }
 
-HotUpdate.delDir();
+// console.info("yyy","yyy");
+HotUpdate.markSuccess();
 
 // RNFS.mkdir(HotUpdateCus.wwwDownloadDir);
