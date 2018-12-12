@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1AFEE23621BE3C8B006CEF11 /* RNUpdateAppJs.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AFEE23521BE3C8B006CEF11 /* RNUpdateAppJs.m */; };
 		1AFEE23721BE3C8B006CEF11 /* RNUpdateAppJs.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 1AFEE23421BE3C8B006CEF11 /* RNUpdateAppJs.h */; };
-		1AFEE23E21BE3DBF006CEF11 /* RNUpdateAppJs.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AFEE23421BE3C8B006CEF11 /* RNUpdateAppJs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -69,17 +68,6 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		1AFEE23D21BE3DAE006CEF11 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1AFEE23E21BE3DBF006CEF11 /* RNUpdateAppJs.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		1AFEE23021BE3C8B006CEF11 /* RNUpdateAppJs */ = {
 			isa = PBXNativeTarget;
@@ -88,7 +76,6 @@
 				1AFEE22D21BE3C8B006CEF11 /* Sources */,
 				1AFEE22E21BE3C8B006CEF11 /* Frameworks */,
 				1AFEE22F21BE3C8B006CEF11 /* CopyFiles */,
-				1AFEE23D21BE3DAE006CEF11 /* Headers */,
 			);
 			buildRules = (
 			);
