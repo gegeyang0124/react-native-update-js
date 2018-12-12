@@ -12,7 +12,7 @@ npm i --save react-native-update-js
 [npm i --save react-native-zip-archive 解压缩组件](https://github.com/plrthink/react-native-zip-archive)<BR/>
 
 
-### 最新版（1.0.4）配置
+### 最新版（1.0.5）配置
 ###### 自动配置
 react-native link react-native-update-js
 ###### 手动配置
@@ -128,11 +128,6 @@ HotUpdate.getAppInfo();//获取更新即时版本信息
 版本1.0.3之后的api
 HotUpdate.markSuccess();//标记更新成功，若js无bug则标记成功，若有bug则回滚到前一个js版本
 ```
-
-
-
-
-
 
 ## 热更新发布
 执行js打包命令：<BR/>
