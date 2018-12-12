@@ -1,6 +1,6 @@
 # react-native-update-js
 热更新组件，可自行配置服务，只需在后台放个配置文件即可，也可以自己写一个接口<br/>
-可根据后台返回的历史版本，随意切换（后台配置，建议使用接口，因为读取后台文件（如xxx.json），有的时候右有缓存）
+可根据后台返回的历史版本，随意切换（后台配置，建议使用接口，因为读取后台文件（如xxx.json），有的时候有缓存）
 
 ##### 支持平台：目前只支持ios (android版，等本人空下来就开发)
 
@@ -35,7 +35,7 @@ react-native link react-native-update-js
   // ... 其它代码
 }
 ```
-###### HotUpdate 的后台配置（若是文件，文件编码最好是utf-8，即普通文本文件）（配置后台文件或接口(get请求)，自由选择）例如下列示例(有一个我测试放在后台的json文件，在[lib文件夹](./lib/update.json)下，可参考)
+###### HotUpdate 的后台配置（若是文件，文件编码最好是utf-8，即普通文本文件）（配置后台文件或接口(get请求)，自由选择）例如下列示例(有一个我测试放在后台的json文件，在[update.json](./lib/update.json)下，可参考)
 ```javascript
 {
             "ios-lx_yyt-2.0.7":{//这key是这样设置,ios："ios-" + HotUpdate.tag + "-" + packageVersion = "lx_yyt-2.0.7";android："android-" + HotUpdate.tag + "-" + packageVersion = "lx_yyt-2.0.7";
