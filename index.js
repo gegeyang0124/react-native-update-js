@@ -22,6 +22,7 @@ export const bundleJsPathCur = HotUpdateJs.bundleJsPathCur;// 当前运行js版�
 export const bundleJsPathLast = HotUpdateJs.bundleJsPathLast;// 上一个前运行js版本的相对路径
 export const build = HotUpdateJs.build;// 构建值（数字），只可增大，不可重复，用于比对版本是否升级
 export const buildLast = HotUpdateJs.buildLast;// 上一个版本的构建值（数字），只可增大，不可重复，用于比对版本是否升级
+export const appVersion = HotUpdateJs.appVersion;//当前app的静态版本号
 // export const Loadding = require("./lib/LoaddingIndicator").default;
 
 /**
