@@ -12,7 +12,7 @@ npm i --save react-native-update-js
 [npm i --save react-native-zip-archive 解压缩组件](https://github.com/plrthink/react-native-zip-archive)<BR/>
 
 
-### 最新版（1.0.6）配置
+### 版本（1.0.5之后的）配置
 ###### 自动配置
 react-native link react-native-update-js
 ###### 手动配置
