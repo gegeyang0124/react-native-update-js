@@ -76,17 +76,17 @@ return bundle;
 }
 
 if(isRefresh == YES){
-
-  NSMutableDictionary *ret = [NSMutableDictionary new];
-ret[paramBundleJsRefresh] = @(NO);
-ret[paramVersionCode] = currentVersion;
-ret[paramVersionCodeLast] = lastVersion;
-ret[paramBundleJsPath] = bundleJsPath;
-ret[paramBundleJsPathLast] = bundleJsPathLast;
-ret[paramBundleJsBuild] = build;
-ret[paramBundleJsBuildLast] = buildLast;
-[userDefaults setObject:ret forKey:paramUpdateInfo];
-[userDefaults synchronize];
+    NSMutableDictionary *ret = [NSMutableDictionary new];
+    ret[paramBundleJsRefresh] = @(NO);
+    ret[paramVersionCode] = currentVersion;
+    ret[paramVersionCodeLast] = lastVersion;
+    ret[paramBundleJsPath] = bundleJsPath;
+    ret[paramBundleJsPathLast] = bundleJsPathLast;
+    ret[paramBundleJsBuild] = build;
+    ret[paramBundleJsBuildLast] = buildLast;
+    ret[paramAppVersionLast] = appVersionLast;
+    [userDefaults setObject:ret forKey:paramUpdateInfo];
+    [userDefaults synchronize];
 
 if(bundleJsPath){
   NSString *bundleJs = [[self DocumentFilePath] stringByAppendingString:bundleJsPath];
@@ -108,16 +108,17 @@ else
 }
 else
 {
-  NSMutableDictionary *ret = [NSMutableDictionary new];
-ret[paramBundleJsRefresh] = @(NO);
-ret[paramVersionCode] = lastVersion;
-ret[paramVersionCodeLast] = lastVersion;
-ret[paramBundleJsPath] = bundleJsPathLast;
-ret[paramBundleJsPathLast] = bundleJsPathLast;
-ret[paramBundleJsBuild] = buildLast;
-ret[paramBundleJsBuildLast] = buildLast;
-[userDefaults setObject:ret forKey:paramUpdateInfo];
-[userDefaults synchronize];
+    NSMutableDictionary *ret = [NSMutableDictionary new];
+    ret[paramBundleJsRefresh] = @(NO);
+    ret[paramVersionCode] = lastVersion;
+    ret[paramVersionCodeLast] = lastVersion;
+    ret[paramBundleJsPath] = bundleJsPathLast;
+    ret[paramBundleJsPathLast] = bundleJsPathLast;
+    ret[paramBundleJsBuild] = buildLast;
+    ret[paramBundleJsBuildLast] = buildLast;
+    ret[paramAppVersionLast] = appVersionLast;
+    [userDefaults setObject:ret forKey:paramUpdateInfo];
+    [userDefaults synchronize];
 
     //      [userDefaults setObject:@{
 //                                paramBundleJsRefresh:@(NO),

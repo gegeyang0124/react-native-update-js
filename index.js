@@ -46,6 +46,7 @@ export class HotUpdate{
         ? `${RNFS.DocumentDirectoryPath}`
         : `${RNFS.ExternalStorageDirectoryPath}`;//js程序资源目录
     static updateInfo = {};//更新数据信息
+    static configToast = true;//当重启配置js程序时，是否提示。
 
     /**
      * 检查更新
@@ -143,11 +144,13 @@ export class HotUpdate{
      * 下载更新
      * @param info json;//更新信息，checkUpdate成功后返回的数据 ，可不传
      * @param progressCallback func;//进程回调函数，回传三位小数 可不传
+     * @param configToast bool,//当重启配置js程序时，是否提示,默认true，提示。
      * return Promise;
      * resolve(info)有数据返回 成功回传数据，在info中增加字段filePath，{filePath:"下载文件路径"}
      * **/
-    static downloadUpdate(info=HotUpdate.updateInfo,progressCallback){
+    static downloadUpdate(info=HotUpdate.updateInfo,progressCallback,cfgToast=true){
         return new Promise((resolve, reject) => {
+            HotUpdate.configToast = cfgToast;
             if(HotUpdate.updateInfo.expired){
                 HotUpdate.updateInfo.downloadUrl && Linking.openURL(HotUpdate.updateInfo.downloadUrl);
             }
@@ -164,7 +167,9 @@ export class HotUpdate{
      * @param isReload bool;//是否立即重载;默认true,立即重载；false,下次启动加载
      * **/
     static doUpdate(info,isReload=true){
-        Loadding.show(true,"正在配置...");
+        if(HotUpdate.configToast){
+            Loadding.show(true,"正在配置...");
+        }
 
         let www = this.WWWROOT + "/" + new Date().getTime();
         let unzipPath = this.sourceDir + www;
@@ -184,7 +189,10 @@ export class HotUpdate{
                         .then(()=>{
                             if(__DEV__){
                                 setTimeout(()=>{
-                                    Loadding.hide();
+                                    if(HotUpdate.configToast){
+                                        Loadding.hide();
+                                    }
+
                                     if(isReload){
                                         this.reload();
                                     }
@@ -192,7 +200,9 @@ export class HotUpdate{
                             }
                             else
                             {
-                                Loadding.hide();
+                                if(HotUpdate.configToast){
+                                    Loadding.hide();
+                                }
                                 if(isReload){
                                     this.reload();
                                 }
@@ -200,7 +210,9 @@ export class HotUpdate{
 
                         })
                         .catch(()=>{
-                            Loadding.hide();
+                            if(HotUpdate.configToast){
+                                Loadding.hide();
+                            }
                         });
                 })
                 .catch((error) => {
@@ -305,9 +317,13 @@ export class HotUpdate{
                                         }
                                         else
                                         {
-                                            Loadding.show(false,"升级包不存在");
+                                            if(HotUpdate.configToast){
+                                                Loadding.show(false,"升级包不存在");
+                                            }
                                             setTimeout(()=>{
-                                                Loadding.hide();
+                                                if(HotUpdate.configToast){
+                                                    Loadding.hide();
+                                                }
                                             },2000);
                                         }
 
